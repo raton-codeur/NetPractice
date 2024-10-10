@@ -83,7 +83,43 @@ c'est le plus gros masque possible. il ne laisse la place que de coder 2 hôtes 
 
 ## premier réseau
 
-
-
 le masque identifie le réseau par les 3 premiers octets de l'adresse IP donnée.  
 il suffit d'utiliser une adresse identique sur les 3 premiers octets.
+
+## deuxième réseau
+
+# niveau 2
+
+<img src="solution/2.png" width="100%" />
+
+# niveau 3
+
+<img src="solution/3.png" width="100%" />
+
+# niveau 4
+
+<img src="solution/4.png" width="100%" />
+
+# niveau 5
+
+<img src="solution/5.png" width="100%" />
+
+# niveau 6
+
+<img src="solution/6.png" width="100%" />
+
+# niveau 7
+
+<img src="solution/7.png" width="100%" />
+
+# niveau 8
+
+<img src="solution/8.png" width="100%" />
+
+# niveau 9
+
+<img src="solution/9.png" width="100%" />
+
+# niveau 10
+
+<img src="solution/10.png" width="100%" />
