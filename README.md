@@ -51,7 +51,7 @@ un *routeur* connecte plusieurs sous-réseaux entre eux.
 
 lorsque plusieurs sous-réseaux sont connectés, la plage d'adresses IP de chaque sous-réseau ne doit pas chevaucher celle des autres !
 
-# division d'un octet par plages selon un masque
+# division d'un octet par plages selon le masque
 
 <img src="img/1.jpg" height="150px" />
 
