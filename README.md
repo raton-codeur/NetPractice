@@ -75,6 +75,8 @@ en partant de la fin :
 
 <img src="img/14.png" height="300px" />
 
+c'est le plus gros masque possible. il ne laisse la place que de coder 2 hôtes par sous-réseau.
+
 # niveau 1
 
 ## premier réseau
