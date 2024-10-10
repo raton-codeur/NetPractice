@@ -79,7 +79,11 @@ c'est le plus gros masque possible. il ne laisse la place que de coder 2 hôtes 
 
 # niveau 1
 
+<img src="solution/1.png" height="300px" />
+
 ## premier réseau
+
+
 
 le masque identifie le réseau par les 3 premiers octets de l'adresse IP donnée.  
 il suffit d'utiliser une adresse identique sur les 3 premiers octets.
