@@ -34,7 +34,7 @@ ainsi, si un hôte a une adresse IP de 4 octets, avec un masque /26 par exemple,
 choisir un gros masque (111111111111111111100 par exemple), c'est donc augmenter le nombre de sous-réseaux possibles au détriment du nombre d'hôtes par sous-réseau.
 
 il faut garder à l'esprit que choisir une adresse IP et un masque de sous-réseau, c'est choisir la plage des adresses IP qui peuvent composer ce sous-réseau. par exemple, sur 4 bits :
-* si le masque est 0000, les adresses IP doivent prendre toutes les valeurs entre 0 à 15
+* si le masque est 0000, les adresses IP peuvent prendre toutes les valeurs entre 0 à 15
 * si le masque est 1000, les adresses IP sont soit toutes entre 0 et 7 (premier bit à 0), soit toutes entre 8 et 15 (premier bit à 1).
 * si le masque est 1100, les adresses IP sont soit
   * toutes entre 0 et 3 (premiers bit à 00)
