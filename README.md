@@ -79,7 +79,7 @@ c'est le plus gros masque possible. il ne laisse la place que de coder 2 hôtes 
 
 # niveau 1
 
-<img src="solution/1.png" height="700px" />
+<img src="solution/1.png" width="100%" />
 
 ## premier réseau
 
