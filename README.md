@@ -21,3 +21,7 @@ les plages vont de 16 en 16 :
 en partant de la fin :
 
 <img src="img/12.png" height="50px" />
+
+---
+
+<img src="img/14.png" height="150px" />
