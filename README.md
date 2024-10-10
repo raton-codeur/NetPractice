@@ -17,7 +17,7 @@ chaque hôte doit avoir une **adresse IP** unique.
 plusieurs hôtes forment localement un **sous-réseau**.  
 
 dans un sous-réseau, les hôtes partagent la même **adresse de sous-réseau**.  
-cette adresse peut s'obtenir à partir de l'adresse IP d'un hôte, en lui appliquant le **masque de sous-réseau**. cela consiste à ne garder que les bits de l'adresse IP où le masque est à 1.  
+cette adresse peut s'obtenir à partir de l'adresse IP d'un hôte, en lui appliquant son **masque de sous-réseau**. cela consiste à ne garder que les bits de l'adresse IP où le masque est à 1.  
 exemple 4 bits :
 * adresse IP en binaire : 10110
 * masque de sous-réseau : 11100
