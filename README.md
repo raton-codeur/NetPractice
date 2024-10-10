@@ -1,3 +1,5 @@
+# la base
+
 1 bit = 0 ou 1
 
 1 octet = 8 bits
@@ -7,8 +9,6 @@ ces valeurs vont de 0 à 255.
 
 ici, les adresses IP sont toutes codées sur 4 octets (c'est de l'IPv4).  
 donner une adresse IP, c'est donner la valeur de ses 4 octets en décimal. (par exemple : 128.255.0.1)
-
----
 
 lorsque plusieurs appareils (ordinateurs, téléphones, imprimantes, ...) sont connectés entre eux, chaque appareil est appelé un *hôte*.
 
@@ -43,30 +43,27 @@ il faut garder à l'esprit que choisir une adresse IP et un masque de sous-rése
   * toutes entre 12 et 15 (premiers bits : 11)
 * ...
 
-lorsque l'on dit qu'une adresse IP doit être dans l'intervalle entre `min` et `max`, on sous-entend qu'elle ne peut ni être `min`, ni être `max`. en effet, l'adresse `min` fait déjà référence à l'adresse du sous-réseau et l'adresse `max` est l'adresse de diffusion dans ce sous-réseau.
+lorsque je dis qu'une adresse IP est entre `min` et `max`, je sous-entends qu'elle n'est ni à `min`, ni à `max`. en effet, l'adresse `min` fait déjà référence à l'adresse du sous-réseau et l'adresse `max` est l'adresse de diffusion dans ce sous-réseau.
 
-le *switch* connecte plusieurs hôtes dans un même sous-réseau.  
-le *routeur* connecte plusieurs sous-réseaux. 
+un *switch* connecte plusieurs hôtes dans un même sous-réseau.
+
+un *routeur* connecte plusieurs sous-réseaux entre eux. 
 
 lorsque plusieurs sous-réseaux sont connectés, la plage d'adresses IP de chaque sous-réseau ne doit pas chevaucher celle des autres !
 
-# les plages théoriques
+# division d'un octet par plages selon un masque
 
 <img src="img/1.jpg" height="150px" />
 
 --- 
 
-<img src="img/2.jpg" height="50px" />
-
-il y a 3 bits pour différencier les adresses réseaux donc il y a 8 plages d'adresses :
+pour le masque 1110 0000 = 224, il y a 3 bits pour différencier les adresses réseaux donc il y a 8 plages d'adresses :
 
 <img src="img/3.jpg" height="100px" />
 
 ---  
 
-<img src="img/4.png" height="50px" />
-
-les plages vont de 16 en 16 :
+pour le masque 1111 0000 = 240, les plages vont de 16 en 16 :
 
 <img src="img/13.png" height="50px" />
 
