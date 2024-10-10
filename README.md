@@ -14,7 +14,7 @@ il y a 3 bits pour différencier les adresses réseaux donc il y a 8 plages de r
 
 <img src="img/4.png" height="50px" />
 
-
-on ces exemples d'intervalles :
+les plages vont de 16 en 16.  
+on a par exemple :
 
 <img src="img/5.jpg" height="100px" />
