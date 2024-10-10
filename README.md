@@ -23,8 +23,8 @@ exemple 4 bits :
 * masque de sous-réseau : 11100
 * &rarr; adresse du sous-réseau : 10100
 
-un masque est toujours de la forme : 1..0  
-par exemple : 111111100000  
+un masque est toujours de la forme : 1...0  
+(par exemple : 111111100000)  
 on peut le donner sous forme binaire, décimale ou CIDR (`/` + le nombre de 1 au début du masque). par exemple, sur 8 bits :
 * en décimal : 192
 * en binaire : 11000000
