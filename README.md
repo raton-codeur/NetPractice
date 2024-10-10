@@ -1,6 +1,6 @@
 
 
-<img src="img/1.jpg" height="100px" />
+<img src="img/1.jpg" height="150px" />
 
 --- 
 
