@@ -30,7 +30,7 @@ on peut le donner sous forme binaire, décimale ou CIDR (`/` + le nombre de 1 au
 * en binaire : 11000000
 * en CIDR : /2
 
-ainsi, si un hôte a une adresse IP de 4 octets, avec un masque /26 par exemple, on sait que les 26 premiers bits codent le sous-réseau et que le reste des bits (les 6 les plus à droite) codent l'adresse de l'hôte au sein du sous-réseau.  
+ainsi, si un hôte a une adresse IP de 4 octets, avec un masque /26 par exemple, on sait que les 26 premiers bits codent le sous-réseau et que le reste des bits (les 6 les plus à droite) codent l'adresse de l'hôte au sein de son sous-réseau.  
 choisir un gros masque (111111111111111111100 par exemple), c'est donc augmenter le nombre de sous-réseaux possibles au détriment du nombre d'hôtes par sous-réseau.
 
 il faut garder à l'esprit que choisir une adresse IP et un masque de sous-réseau, c'est choisir la plage des adresses IP qui peuvent composer ce sous-réseau. par exemple, sur 4 bits :
