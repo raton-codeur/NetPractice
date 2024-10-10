@@ -10,14 +10,14 @@ ces valeurs vont de 0 à 255.
 ici, les adresses IP sont toutes codées sur 4 octets (c'est de l'IPv4).  
 donner une adresse IP, c'est donner la valeur de ses 4 octets en décimal. (par exemple : 128.255.0.1)
 
-lorsque plusieurs appareils (ordinateurs, téléphones, imprimantes, ...) sont connectés entre eux, chaque appareil est appelé un *hôte*.
+lorsque plusieurs appareils (ordinateurs, téléphones, imprimantes, ...) sont connectés entre eux, chaque appareil est appelé un **hôte**.
 
-chaque hôte doit avoir une *adresse IP* unique.  
+chaque hôte doit avoir une **adresse IP** unique.  
 
-plusieurs hôtes forment localement un *sous-réseau*.  
+plusieurs hôtes forment localement un **sous-réseau**.  
 
-dans un sous-réseau, les hôtes partagent la même *adresse de sous-réseau*.  
-cette adresse peut s'obtenir à partir de l'adresse IP d'un hôte, en lui appliquant le *masque de sous-réseau*. cela consiste à ne garder que les bits de l'adresse IP où le masque est à 1.  
+dans un sous-réseau, les hôtes partagent la même **adresse de sous-réseau**.  
+cette adresse peut s'obtenir à partir de l'adresse IP d'un hôte, en lui appliquant le **masque de sous-réseau**. cela consiste à ne garder que les bits de l'adresse IP où le masque est à 1.  
 exemple 4 bits :
 * adresse IP en binaire : 10110
 * masque de sous-réseau : 11100
@@ -45,9 +45,9 @@ il faut garder à l'esprit que choisir une adresse IP et un masque de sous-rése
 
 lorsque je dis qu'une adresse IP est entre `min` et `max`, je sous-entends qu'elle n'est ni à `min`, ni à `max`. en effet, l'adresse `min` fait déjà référence à l'adresse du sous-réseau et l'adresse `max` est l'adresse de diffusion dans ce sous-réseau.
 
-un *switch* connecte plusieurs hôtes dans un même sous-réseau.
+un **switch** connecte plusieurs hôtes dans un même sous-réseau.
 
-un *routeur* connecte plusieurs sous-réseaux entre eux. 
+un **routeur** connecte plusieurs sous-réseaux entre eux. 
 
 lorsque plusieurs sous-réseaux sont connectés, la plage d'adresses IP de chaque sous-réseau ne doit pas chevaucher celle des autres !
 
