@@ -4,7 +4,7 @@
 
 --- 
 
-<img src="img/2.jpg" height="100px" />
+<img src="img/2.jpg" height="50px" />
 
 il y a 3 bits pour différencier les adresses réseaux donc il y a 8 plages de réseaux qui ne pourront pas se chevaucher :
 
@@ -12,7 +12,7 @@ il y a 3 bits pour différencier les adresses réseaux donc il y a 8 plages de r
 
 ---  
 
-<img src="img/4.png" height="100px" />
+<img src="img/4.png" height="50px" />
 
 
 on ces exemples d'intervalles :
