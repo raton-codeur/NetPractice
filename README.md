@@ -2,23 +2,19 @@
 
 <img src="img/1.jpg" height="100px" />
 
-
-
-1
-
 --- 
 
-2
+<img src="img/2.jpg" height="100px" />
 
 il y a 3 bits pour différencier les adresses réseaux donc il y a 8 plages de réseaux qui ne pourront pas se chevaucher :
 
-3
+<img src="img/3.jpg" height="100px" />
 
 ---  
 
-4
+<img src="img/4.png" height="100px" />
 
 
 on ces exemples d'intervalles :
 
-5
+<img src="img/5.jpg" height="100px" />
