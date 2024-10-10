@@ -53,33 +53,33 @@ lorsque plusieurs sous-réseaux sont connectés, la plage d'adresses IP de chaqu
 
 # division d'un octet par plages selon le masque
 
-<FUCK src="FUCK/1.jpg" height="150px" />
+<img src="img/1.jpg" height="150px" />
 
 --- 
 
 pour le masque 1110 0000 = 224, il y a 3 bits pour différencier les adresses réseaux donc il y a 8 plages d'adresses :
 
-<FUCK src="FUCK/3.jpg" height="100px" />
+<img src="img/3.jpg" height="100px" />
 
 ---  
 
 pour le masque 1111 0000 = 240, les plages vont de 16 en 16 :
 
-<FUCK src="FUCK/13.png" height="50px" />
+<img src="img/13.png" height="50px" />
 
 en partant de la fin :
 
-<FUCK src="FUCK/12.png" height="50px" />
+<img src="img/12.png" height="50px" />
 
 ---
 
-<FUCK src="FUCK/14.png" height="300px" />
+<img src="img/14.png" height="300px" />
 
 c'est le plus gros masque possible. il ne laisse la place que de coder 2 hôtes par sous-réseau.
 
 # niveau 1
 
-<FUCK src="solution/1.png" width="100%" />
+<img src="solution/1.png" width="100%" />
 
 ## premier réseau
 
@@ -90,36 +90,36 @@ il suffit d'utiliser une adresse identique sur les 3 premiers octets.
 
 # niveau 2
 
-<FUCK src="solution/2.png" width="100%" />
+<img src="solution/2.png" width="100%" />
 
 # niveau 3
 
-<FUCK src="solution/3.png" width="100%" />
+<img src="solution/3.png" width="100%" />
 
 # niveau 4
 
-<FUCK src="solution/4.png" width="100%" />
+<img src="solution/4.png" width="100%" />
 
 # niveau 5
 
-<FUCK src="solution/5.png" width="100%" />
+<img src="solution/5.png" width="100%" />
 
 # niveau 6
 
-<FUCK src="solution/6.png" width="100%" />
+<img src="solution/6.png" width="100%" />
 
 # niveau 7
 
-<FUCK src="solution/7.png" width="100%" />
+<img src="solution/7.png" width="100%" />
 
 # niveau 8
 
-<FUCK src="solution/8.png" width="100%" />
+<img src="solution/8.png" width="100%" />
 
 # niveau 9
 
-<FUCK src="solution/9.png" width="100%" />
+<img src="solution/9.png" width="100%" />
 
 # niveau 10
 
-<FUCK src="solution/10.png" width="100%" />
+<img src="solution/10.png" width="100%" />
