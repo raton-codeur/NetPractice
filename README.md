@@ -24,4 +24,4 @@ en partant de la fin :
 
 ---
 
-<img src="img/14.png" height="150px" />
+<img src="img/14.png" height="300px" />
