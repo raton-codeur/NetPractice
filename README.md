@@ -131,17 +131,16 @@ chaque appareil connecté est appelé un **hôte**.
 les données à envoyer sont divisées en **paquets**.  
 
 **IP** est le protocole d'adressage (&rarr; couche réseau dans le modèle OSI).  
-il utilise les adresses des hôtes du réseau (les fameuses **adresses IP**) pour adresser correctement chaque paquet transmis.  
+il utilise les adresses des hôtes du réseau (les fameuses **adresses IP**) pour adresser correctement chaque paquet transmis.
 IP assure que les paquets arrivent à la bonne destination, mais il ne garantit ni leur ordre ni leur fiabilité.
 
 **TCP** est le protocole de contrôle des transmissions (&rarr; couche transport dans le modèle OSI).  
 il établit une connexion fiable entre chaque expéditeur et récepteur, vérifie que les paquets sont bien reçus (sinon, il les retransmet) et qu'ils arrivent dans le bon ordre (sinon, il les reclasse).
 
-chaque hôte doit avoir une adresse IP unique.  
+chaque hôte doit avoir une **adresse IP** unique ainsi qu'un **masque de sous-réseau** (pas forcément unique).   
 
-ici, les adresses IP sont toutes codées sur 4 octets (c'est de l'IPv4).  
-donner une adresse IP, c'est donner la valeur de ses 4 octets.  
-par exemple :
+ici, les adresses IP et les masques sont tous codées sur 4 octets (c'est de l'IPv4).  
+donner une adresse IP, c'est donc donner les valeurs de ses 4 octets. par exemple :
 en décimal | en binaire
 -- | --
 `128.255.0.3` | `10000000.11111111.00000000.00000011`
@@ -158,7 +157,7 @@ exemple :
 
     &rarr; adresse du sous-réseau : `01101000.11000110.11110001.00000000`
 
-c'est équivalent de dire que l'adresse du sous-réseau s'obtient en faisant l'opération binaire ET pour chaque entre l'adresse IP et le masque de sous-réseau. on a :
+> c'est équivalent de dire que l'adresse du sous-réseau s'obtient en faisant l'opération binaire ET entre l'adresse IP et le masque de sous-réseau.
 
 un masque est toujours de la forme : "un certain nombre de 1" suivi de "un certain nombre de 0". par exemple : 111111100000.  
 on peut le donner sous forme binaire, décimale ou CIDR (`/` + le nombre de 1 au début du masque). par exemple, sur 8 bits :
