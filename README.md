@@ -90,7 +90,23 @@ un nombre binaire est composé de bits.
 1 octet = 8 bits
 
 on peut coder 2<sup>8</sup> = 256 valeurs différentes sur un octet.  
-ces valeurs vont de 
+
+<table style="border-collapse: collapse;">
+    <tr>
+        <td style="border-right: 1px solid black; border-top: none; border-bottom: none;">ces valeurs vont de</td>
+        <td style="border-right: 1px solid black; border-top: none; border-bottom: none;"><code>0</code> (en décimal)</td>
+        <td style="border-right: 1px solid black; border-top: none; border-bottom: none;">à</td>
+        <td style="border-top: none; border-bottom: none;"><code>255</code> (en décimal)</td>
+    </tr>
+    <tr>
+        <td style="border-right: 1px solid black; border-top: none; border-bottom: none;"></td> 
+        <td style="border-right: 1px solid black; border-top: none; border-bottom: none;"><code>00000000</code> (en binaire)</td>
+        <td style="border-right: 1px solid black; border-top: none; border-bottom: none;"></td> 
+        <td style="border-top: none; border-bottom: none;"><code>11111111</code> (en binaire)</td>
+    </tr>
+</table>
+
+de
 ```
 0 (décimal) = 00000000 (binaire)
 ```
