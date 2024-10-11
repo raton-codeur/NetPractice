@@ -148,7 +148,7 @@ en décimal | en binaire
 
 plusieurs hôtes forment localement un **sous-réseau**.  
 
-dans un sous-réseau, tous les hôtes partagent la même **adresse de sous-réseau** et, généralement, le même **masque de sous-réseau**.  
+dans un sous-réseau, tous les hôtes partagent la même **adresse de sous-réseau** et (généralement) le même **masque de sous-réseau**.  
 l'adresse de sous-réseau peut s'obtenir à partir de l'adresse IP d'un hôte en binaire, en lui appliquant son **masque de sous-réseau** (en binaire aussi). cela consiste à ne garder que les bits de l'adresse IP où le masque est à 1.  
 exemple :
 * adresse IP : `104.198.241.125` (en décimal)  
