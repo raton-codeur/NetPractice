@@ -137,7 +137,7 @@ IP assure que les paquets arrivent à la bonne destination, mais il ne garantit 
 **TCP** est le protocole de contrôle des transmissions (&rarr; couche transport dans le modèle OSI).  
 il établit une connexion fiable entre chaque expéditeur et récepteur, vérifie que les paquets sont bien reçus (sinon, il les retransmet) et qu'ils arrivent dans le bon ordre (sinon, il les reclasse).
 
-chaque hôte doit avoir une **adresse IP** unique ainsi qu'un **masque de sous-réseau** (pas forcément unique).   
+chaque hôte doit avoir une **adresse IP** unique ainsi qu'un **masque de sous-réseau**.   
 
 ici, les adresses IP et les masques sont tous codées sur 4 octets (c'est de l'IPv4).  
 donner une adresse IP, c'est donc donner les valeurs de ses 4 octets. par exemple :
