@@ -9,7 +9,7 @@ ces valeurs vont de 0 à 255.
 
 # la base sur les réseaux
 
-lorsque plusieurs appareils (ordinateurs, téléphones, imprimantes, ...) veulent communiquer entre eux, ils utilisent des **protocoles de communication**.  
+lorsque plusieurs appareils (ordinateurs, téléphones, imprimantes, ...) veulent communiquer entre eux, ils doivent utiliser des **protocoles de communication**.  
 parmi ces protocoles, on retrouve **TCP/IP** (la suite des protocoles Internet).
 
 chaque appareil connecté est appelé un **hôte**.  
@@ -18,10 +18,10 @@ les données à envoyer sont divisées en **paquets**.
 
 **IP** est le protocole d'adressage (&rarr; couche réseau de la communication).  
 il utilise les **adresses IP** des hôtes du réseau pour envoyer leurs paquets.  
-IP assure que les paquets arrivent à bonne destination, mais il ne garantit ni leur ordre ni leur fiabilité.
+IP assure que les paquets arrivent à la bonne destination, mais il ne garantit ni leur ordre ni leur fiabilité.
 
 **TCP** est le protocole de contrôle des transmissions (&rarr; couche transport de la communication).  
-il établit une connexion entre expéditeur et récepteur et vérifie que les paquets sont bien reçus (sinon, il les retransmet) et qu'ils sont dans le bon ordre (sinon, il les retrie).
+il établit une connexion entre expéditeur et récepteur et vérifie que les paquets sont bien reçus (sinon, il les retransmet) et qu'ils sont dans le bon ordre (sinon, il les reclasse).
 
 chaque hôte doit avoir une **adresse IP** unique.  
 
@@ -44,10 +44,10 @@ on peut le donner sous forme binaire, décimale ou CIDR (`/` + le nombre de 1 au
 * en binaire : 11000000
 * en CIDR : /2
 
-ainsi, si un hôte a une adresse IP sur 4 octets, avec un masque /26 par exemple, on sait que les 26 premiers bits codent le sous-réseau et que le reste des bits (les 6 les plus à droite) codent l'adresse de l'hôte au sein de son sous-réseau.  
+par exemple, avec un masque /26, comme une adresse IP est codée sur 4 octets, on sait que ses 26 premiers bits codent le sous-réseau et que le reste des bits (les 6 les plus à droite) codent l'adresse l'hôte au sein de son sous-réseau.  
 choisir un gros masque (111111111111111111100 par exemple), c'est donc augmenter le nombre de sous-réseaux possibles au détriment du nombre d'hôtes par sous-réseau.
 
-il faut garder à l'esprit que choisir une adresse IP et un masque de sous-réseau, c'est choisir la plage des adresses IP qui peuvent composer ce sous-réseau. par exemple, sur 4 bits :
+une autre façon de le voir c'est de dire que choisir une adresse IP et un masque de sous-réseau, c'est choisir la plage des adresses IP qui peuvent composer ce sous-réseau. par exemple, sur 4 bits :
 * si le masque est 0000, les adresses IP peuvent prendre toutes les valeurs entre 0 et 15
 * si le masque est 1000, les adresses IP sont soit toutes entre 0 et 7 (premier bit à 0), soit toutes entre 8 et 15 (premier bit à 1).
 * si le masque est 1100, les adresses IP sont soit :
@@ -57,11 +57,11 @@ il faut garder à l'esprit que choisir une adresse IP et un masque de sous-rése
   * toutes entre 12 et 15 (premiers bits : 11)
 * ...
 
-on observe qu'augmenter le masque d'un bit revient à :
+on observe qu'augmenter le masque d'un bit revient à chaque fois à :
 * multiplier le nombre de plages d'adresses IP par 2 (c'est-à-dire multiplier le nombre maximal de sous-réseau par 2)
 * diviser le nombre maximal d'hôtes par sous-réseau par 2.
 
-lorsque je dis qu'une adresse IP doit être dans la plage entre `min` et `max`, je sous-entends qu'elle n'est ni à `min` ni à `max`. en effet, l'adresse `min` fait déjà référence à l'adresse du sous-réseau et l'adresse `max` est l'adresse de diffusion dans ce sous-réseau.
+lorsque je dis qu'une adresse IP doit être dans la plage de valeurs entre `min` et `max`, je sous-entends qu'elle n'est ni à `min` ni à `max`. en effet, l'adresse `min` fait déjà référence à l'adresse du sous-réseau et l'adresse `max` est l'adresse de diffusion dans ce sous-réseau.
 
 un **switch** connecte plusieurs hôtes dans un même sous-réseau.
 
