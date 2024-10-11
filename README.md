@@ -80,7 +80,6 @@ ces valeurs vont de
 255 (décimal) = 11111111 (binaire)
 ```
 
-
 la table de vérité de l'opérateur binaire ET est la suivante :
 ```
 0 ET 0 = 0
@@ -89,6 +88,7 @@ la table de vérité de l'opérateur binaire ET est la suivante :
 1 ET 1 = 1
 ```
 
+on peut effectuer l'opération ET entre deux nombres binaires en appliquant cette table de vérité bit à bit.  
 par exemple :
 ```
 9 ET 3 = 1
