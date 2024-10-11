@@ -1,10 +1,9 @@
 # rappels sur le binaire
 
+tous les nombres décimaux (= écrits en base 10) peuvent s'écrire en binaire (= base 2).
+
+un nombre binaire est composé de bits.  
 1 bit = 0 ou 1
-
-1 octet = 8 bits
-
-tous les nombres décimaux (= écrits en base 10) peuvent s'écrire en binaire (= base 2).  
 
 <details>
 <summary>tableau de conversion basique</summary>
@@ -69,12 +68,18 @@ tous les nombres décimaux (= écrits en base 10) peuvent s'écrire en binaire (
 </table>
 </details> 
 
+1 octet = 8 bits
+
 on peut coder 2<sup>8</sup> = 256 valeurs différentes sur un octet.  
-ces valeurs vont de
+ces valeurs vont de 
 ```
-0 (en décimal) = 00000000 (en binaire)
-255 (en décimal) = 11111111 (en binaire)
+0 (décimal) = 00000000 (binaire)
 ```
+à
+```
+255 (décimal) = 11111111 (binaire)
+```
+
 
 la table de vérité de l'opérateur binaire ET est la suivante :
 ```
@@ -86,8 +91,11 @@ la table de vérité de l'opérateur binaire ET est la suivante :
 
 par exemple :
 ```
-9 ET 3 = 1, car :
-6 = 1001
+9 ET 3 = 1
+```
+car 
+``` 
+9 = 1001
 3 = 0011
 1 = 0001
 ```
