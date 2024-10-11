@@ -1,4 +1,24 @@
-# rappels sur le binaire
+# mon guide pour NetPractice 
+
+## sommaire
+
+<!-- no toc -->
+  - [rappels sur le binaire](#rappels-sur-le-binaire)
+  - [la base sur les réseaux](#la-base-sur-les-réseaux)
+  - [division d'un octet par plages selon le masque](#division-dun-octet-par-plages-selon-le-masque)
+  - [niveau 1](#niveau-1)
+  - [niveau 2](#niveau-2)
+  - [niveau 3](#niveau-3)
+  - [niveau 4](#niveau-4)
+  - [niveau 5](#niveau-5)
+  - [niveau 6](#niveau-6)
+  - [niveau 7](#niveau-7)
+  - [niveau 8](#niveau-8)
+  - [niveau 9](#niveau-9)
+  - [niveau 10](#niveau-10)
+
+
+## rappels sur le binaire
 
 tous les nombres décimaux (= écrits en base 10) peuvent s'écrire en binaire (= base 2).
 
@@ -100,7 +120,9 @@ car
 1 (en décimal) = 0001 (en binaire)
 ```
 
-# la base sur les réseaux
+[&uarr; retour au sommaire &uarr;](#sommaire)
+
+## la base sur les réseaux
 
 lorsque plusieurs appareils (ordinateurs, téléphones, imprimantes, ...) veulent communiquer entre eux, ils doivent utiliser des **protocoles de communication**.  
 parmi ces protocoles, on retrouve **TCP/IP** (aussi appelé "la suite des protocoles Internet").
@@ -178,7 +200,9 @@ les adresses IP suivantes sont réservées aux réseaux privés (ou réseaux loc
 * de 172.16.x.x à 172.31.x.x
 * 10.x.x.x
 
-# division d'un octet par plages selon le masque
+[&uarr; retour au sommaire &uarr;](#sommaire)
+
+## division d'un octet par plages selon le masque
 
 <img src="img/1.jpg" height="150px" />
 
@@ -208,11 +232,13 @@ pour le masque 1111 0000 = 240, les plages vont de 16 en 16 :
 
 c'est le plus gros masque possible. il ne laisse la place que de coder 2 hôtes par sous-réseau.
 
-# niveau 1
+[&uarr; retour au sommaire &uarr;](#sommaire)
+
+## niveau 1
 
 <img src="solution/1.png" width="100%" />
 
-## premier réseau
+### premier réseau
 
 le réseau est un unique sous-réseau.
 
@@ -220,47 +246,63 @@ le masque indique que le sous-réseau est codé sur les 3 premiers octets des ad
 
 il suffit d'utiliser une adresse identique sur les 3 premiers octets.
 
-## deuxième réseau
+### deuxième réseau
 
 c'est la même chose sauf que le sous-réseau est codé sur les 2 premiers octets.
 
-# niveau 2
+[&uarr; retour au sommaire &uarr;](#sommaire)
+
+## niveau 2
 
 <img src="solution/2.png" width="100%" />
 
-# niveau 3
+[&uarr; retour au sommaire &uarr;](#sommaire)
+
+## niveau 3
 
 <img src="solution/3.png" width="100%" />
 
-masque : 192 = 1100 0000
-plages : 0 → 63, 64 -> 127, 128 -> 191, 192 -> 255
-adresse IP : 0100 0010 = 66
-adresse du sous réseau : 0100 0000 = 64
+[&uarr; retour au sommaire &uarr;](#sommaire)
 
-# niveau 4
+## niveau 4
 
 <img src="solution/4.png" width="100%" />
 
-# niveau 5
+[&uarr; retour au sommaire &uarr;](#sommaire)
+
+## niveau 5
 
 <img src="solution/5.png" width="100%" />
 
-# niveau 6
+[&uarr; retour au sommaire &uarr;](#sommaire)
+
+## niveau 6
 
 <img src="solution/6.png" width="100%" />
 
-# niveau 7
+[&uarr; retour au sommaire &uarr;](#sommaire)
+
+## niveau 7
 
 <img src="solution/7.png" width="100%" />
 
-# niveau 8
+[&uarr; retour au sommaire &uarr;](#sommaire)
+
+## niveau 8
 
 <img src="solution/8.png" width="100%" />
 
-# niveau 9
+[&uarr; retour au sommaire &uarr;](#sommaire)
+
+## niveau 9
 
 <img src="solution/9.png" width="100%" />
 
-# niveau 10
+[&uarr; retour au sommaire &uarr;](#sommaire)
+
+## niveau 10 
+<span style="text-align: right;"></span>
 
 <img src="solution/10.png" width="100%" />
+
+[&uarr; retour au sommaire &uarr;](#sommaire)
