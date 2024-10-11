@@ -135,12 +135,16 @@ il utilise les adresses des hôtes du réseau (les fameuses **adresses IP**) pou
 IP assure que les paquets arrivent à la bonne destination, mais il ne garantit ni leur ordre ni leur fiabilité.
 
 **TCP** est le protocole de contrôle des transmissions (&rarr; couche transport dans le modèle OSI).  
-il établit une connexion entre chaque expéditeur et récepteur puis il vérifie que les paquets sont bien reçus (sinon, il les retransmet) et qu'ils sont dans le bon ordre (sinon, il les reclasse).
+il établit une connexion fiable entre chaque expéditeur et récepteur, vérifie que les paquets sont bien reçus (sinon, il les retransmet) et qu'ils arrivent dans le bon ordre (sinon, il les reclasse).
 
 chaque hôte doit avoir une adresse IP unique.  
 
 ici, les adresses IP sont toutes codées sur 4 octets (c'est de l'IPv4).  
-donner une adresse IP, c'est donner la valeur de ses 4 octets en décimal. (par exemple : 128.255.0.1)
+donner une adresse IP, c'est donner la valeur de ses 4 octets.  
+par exemple :
+en décimal | en binaire
+-- | --
+`128.255.0.3` | `10000000.11111111.00000000.00000011`
 
 plusieurs hôtes forment localement un **sous-réseau**.  
 
