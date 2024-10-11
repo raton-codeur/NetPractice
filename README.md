@@ -25,7 +25,7 @@ un nombre binaire est composé de bits.
 1 bit = `0` ou `1`
 
 <details open>
-<summary>tableau de conversion basique</summary>
+<summary>table de conversion basique</summary>
 <table style="font-family: monospace;">
   <thead>
     <tr>
