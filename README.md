@@ -5,7 +5,7 @@ tous les nombres décimaux (= écrits en base 10) peuvent s'écrire en binaire (
 un nombre binaire est composé de bits.  
 1 bit = 0 ou 1
 
-<details>
+<details open>
 <summary>tableau de conversion basique</summary>
 <table style="font-family: monospace;">
   <thead>
@@ -88,16 +88,16 @@ la table de vérité de l'opérateur binaire ET est la suivante :
 1 ET 1 = 1
 ```
 
-on peut effectuer l'opération ET entre deux nombres binaires en appliquant cette table de vérité bit à bit.  
+on peut effectuer l'opération ET entre deux nombres en appliquant cette table de vérité bit à bit.  
 par exemple :
 ```
 9 ET 3 = 1
 ```
 car 
 ``` 
-9 = 1001
-3 = 0011
-1 = 0001
+9 (en décimal) = 1001 (en binaire)
+3 (en décimal) = 0011 (en binaire)
+1 (en décimal) = 0001 (en binaire)
 ```
 
 # la base sur les réseaux
