@@ -161,9 +161,9 @@ exemple :
 
 un masque de sous-réseau est toujours de la forme : "un certain nombre de 1" suivi de "un certain nombre de 0". par exemple : 111111100000.  
 on peut le donner sous forme binaire, décimale ou CIDR (`/` + le nombre de 1 au début du masque). par exemple, sur 8 bits :
-* en décimal : 192
-* en binaire : 11000000
-* en CIDR : /2
+en décimal | en binaire | en CIDR
+-- | -- | --
+192 | 11000000 | /2
 
 autre exemple, avec un masque /26, on sait que les 26 premiers bits de l'adresse IP indiquent l'adresse du sous-réseau. sachant que l'adresse IP d'un hôte est codée sur 4 octets (= 32 bits), on sait donc que les 6 derniers bits (= 32 - 26) indiquent l'adresse de cet hôte au sein de ce sous-réseau.  
 
