@@ -3,7 +3,7 @@
 tous les nombres décimaux (= écrits en base 10) peuvent s'écrire en binaire (= base 2).
 
 un nombre binaire est composé de bits.  
-1 bit = 0 ou 1
+1 bit = `0` ou `1`
 
 <details open>
 <summary>tableau de conversion basique</summary>
