@@ -1,4 +1,4 @@
-# mon guide pour NetPractice 
+# petit guide de NetPractice 
 
 ## sommaire
 
@@ -16,7 +16,6 @@
   - [niveau 8](#niveau-8)
   - [niveau 9](#niveau-9)
   - [niveau 10](#niveau-10)
-
 
 ## rappels sur le binaire
 
