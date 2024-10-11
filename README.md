@@ -15,7 +15,7 @@ un nombre binaire est composé de bits.
     </tr>
   </thead>
   <tbody>
-        <tr><td>0</td><td><code>00000000</code></td></tr>
+    <tr><td>0</td><td><code>00000000</code></td></tr>
     <tr><td>1</td><td><code>00000001</code></td></tr>
     <tr><td>2</td><td><code>00000010</code></td></tr>
     <tr><td>3</td><td><code>00000011</code></td></tr>
@@ -64,7 +64,6 @@ un nombre binaire est composé de bits.
     <tr><td>254</td><td><code>11111110</code></td></tr>
     <tr><td>255</td><td><code>11111111</code></td></tr>
     <tr><td>256</td><td><code>100000000</code></td></tr>
-
   </tbody>
 </table>
 </details> 
