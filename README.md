@@ -130,11 +130,11 @@ chaque appareil connecté est appelé un **hôte**.
 
 les données à envoyer sont divisées en **paquets**.  
 
-**IP** est le protocole d'adressage (&rarr; c'est la couche réseau dans le modèle de la communication).  
+**IP** est le protocole d'adressage (&rarr; couche réseau dans le modèle OSI).  
 il utilise les adresses des hôtes du réseau (les fameuses **adresses IP**) pour adresser correctement chaque paquet transmis.  
 IP assure que les paquets arrivent à la bonne destination, mais il ne garantit ni leur ordre ni leur fiabilité.
 
-**TCP** est le protocole de contrôle des transmissions (&rarr; c'est la couche transport dans le modèle de la communication).  
+**TCP** est le protocole de contrôle des transmissions (&rarr; couche transport dans le modèle OSI).  
 il établit une connexion entre chaque expéditeur et récepteur puis il vérifie que les paquets sont bien reçus (sinon, il les retransmet) et qu'ils sont dans le bon ordre (sinon, il les reclasse).
 
 chaque hôte doit avoir une adresse IP unique.  
