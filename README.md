@@ -150,12 +150,13 @@ plusieurs hôtes forment localement un **sous-réseau**.
 dans un sous-réseau, tous les hôtes partagent la même **adresse de sous-réseau** et (pour rester simple) le même masque de sous-réseau.  
 l'adresse du sous-réseau peut s'obtenir à partir de l'adresse IP d'un hôte en binaire, en lui appliquant son masque de sous-réseau (en binaire aussi). cela consiste à ne garder que les bits de l'adresse IP où le masque est à 1.  
 exemple :
-* adresse IP : `104.198.241.125` (en décimal)  
-= `01101000.11000110.11110001.01111101` (en binaire)
+* adresse IP : `104.198.241.245` (en décimal)  
+= `01101000.11000110.11110001.11110101` (en binaire)
 * masque de sous-réseau : `255.255.255.128` (en décimal)  
 = `11111111.11111111.11111111.10000000` (en binaire)
 
-    &rarr; adresse du sous-réseau : `01101000.11000110.11110001.00000000`
+    &rarr; adresse du sous-réseau : `01101000.11000110.11110001.10000000` (en binaire)  
+    = `104.198.241.128` (en décimal)
 
 > c'est équivalent de dire que l'adresse du sous-réseau s'obtient en faisant l'opération binaire ET entre l'adresse IP et le masque de sous-réseau.
 
