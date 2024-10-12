@@ -159,12 +159,13 @@ exemple :
 
 > c'est équivalent de dire que l'adresse du sous-réseau s'obtient en faisant l'opération binaire ET entre l'adresse IP et le masque de sous-réseau.
 
-un masque de sous-réseau (en binaire) est toujours de la forme : "un certain nombre de 1" suivi de "un certain nombre de 0" (par exemple : 11111111.11111111.11110000.00000000).  
+un masque de sous-réseau (en binaire) est toujours de la forme : "un certain nombre de 1" suivi de "un certain nombre de 0".  
 on peut le donner sous forme binaire, décimale ou CIDR.  
-la notation CIDR (Classless Inter-Domain Routing) consiste à utiliser `/` + le nombre de 1 au début du masque. par exemple, sur 8 bits :
+la notation CIDR (Classless Inter-Domain Routing) consiste à utiliser `/` + le nombre de 1 au début du masque.  
+par exemple :
 en décimal | en binaire | en CIDR
 -- | -- | --
-192 | 11000000 | /2
+255.255.240.0 | 11111111.11111111.11110000.00000000 | /20
 
 le masque de sous-réseau sépare donc une adresse IP entre les bits qui servent à coder le sous-réseau (à gauche) de ceux qui servent à coder l'hôte au sein du sous-réseau (à droite). il suffit de préciser le nombre de bits qui servent à coder le sous-réseau pour en déduire le nombre de bits qui servent à coder l'hôte au sein du sous-réseau.  
 par exemple, avec un masque /26, on sait que les 26 premiers bits de l'adresse IP codent l'adresse du sous-réseau et, sachant que l'adresse IP d'un hôte est codée sur 4 octets (= 32 bits), on sait que les 6 derniers bits (= 32 - 26) codent l'adresse de l'hôte au sein du sous-réseau.  
