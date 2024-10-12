@@ -163,7 +163,7 @@ un masque de sous-réseau (en binaire) est toujours de la forme : "un certain no
 on peut le donner sous forme binaire, décimale ou CIDR.  
 la notation CIDR (Classless Inter-Domain Routing) consiste à utiliser `/` + le nombre de 1 au début du masque.  
 par exemple :
-masque de sous-réseau en décimal | masque de sous-réseau en binaire | masque de sous-réseau en CIDR
+masque de sous-réseau en décimal | masque de sous-réseau en binaire | masque de sous-réseau en notation CIDR
 -- | -- | --
 `255.255.240.0` | `11111111.11111111.11110000.00000000` | `/20`
 
