@@ -165,7 +165,7 @@ la notation CIDR (Classless Inter-Domain Routing) consiste à utiliser `/` + le 
 par exemple :
 en décimal | en binaire | en CIDR
 -- | -- | --
-255.255.240.0 | 11111111.11111111.11110000.00000000 | /20
+`255.255.240.0` | `11111111.11111111.11110000.00000000` | `/20`
 
 le masque de sous-réseau sépare donc une adresse IP entre les bits qui servent à coder le sous-réseau (à gauche) de ceux qui servent à coder l'hôte au sein du sous-réseau (à droite). il suffit de préciser le nombre de bits qui servent à coder le sous-réseau pour en déduire le nombre de bits qui servent à coder l'hôte au sein du sous-réseau.  
 par exemple, avec un masque /26, on sait que les 26 premiers bits de l'adresse IP codent l'adresse du sous-réseau et, sachant que l'adresse IP d'un hôte est codée sur 4 octets (= 32 bits), on sait que les 6 derniers bits (= 32 - 26) codent l'adresse de l'hôte au sein du sous-réseau.  
