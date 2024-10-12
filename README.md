@@ -205,7 +205,7 @@ un **routeur** connecte plusieurs sous-réseaux entre eux.
 
 lorsque plusieurs sous-réseaux sont connectés, la plage d'adresses IP de chaque sous-réseau ne doit pas chevaucher celle des autres !
 
-une **table de routage** est utilisée pour définir à quelle adresse IP envoyer un paquet lorsque son adresse de destination n'est pas directement accessible. c'est une liste d'associations :  
+une **table de routage** est utilisée pour définir à quelle adresse IP envoyer ensuite un paquet lorsque son adresse de destination n'est pas directement accessible. c'est une liste d'associations :  
 adresse du sous-réseau de destination &rarr; adresse IP suivante  
 adresse du sous-réseau de destination &rarr; adresse IP suivante  
 ...
