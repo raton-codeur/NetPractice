@@ -139,7 +139,7 @@ il établit une connexion fiable entre chaque expéditeur et récepteur, vérifi
 
 chaque hôte doit avoir une **adresse IP** unique ainsi qu'un **masque de sous-réseau**.   
 
-ici, les adresses IP et les masques sont tous codées sur 4 octets (c'est de l'IPv4).  
+ici, les adresses IP et les masques sont codées sur 4 octets (c'est de l'IPv4).  
 donner une adresse IP ou un masque, c'est donc donner les valeurs de ses 4 octets. par exemple :
 adresse IP en décimal | adresse IP en binaire
 -- | --
