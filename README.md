@@ -27,7 +27,7 @@ un nombre binaire est composé de bits.
 sur n bits, on peut coder 2<sup>n</sup> valeurs différentes.
 
 <details open>
-<summary>table de conversion basique</summary>
+<summary>table de conversion</summary>
 <table style="font-family: monospace;">
   <thead>
     <tr>
