@@ -143,7 +143,7 @@ ici, les adresses IP et les masques sont codées sur 4 octets (c'est de l'IPv4).
 donner une adresse IP ou un masque, c'est donc donner les valeurs de ses 4 octets. par exemple :
 adresse IP en décimal | adresse IP en binaire
 -- | --
-`128.255.0.3` | `10000000.11111111.00000000.00000011`
+`128.255.0.5` | `10000000.11111111.00000000.00000101`
 
 plusieurs hôtes forment localement un **sous-réseau**.  
 
