@@ -22,7 +22,9 @@
 tous les nombres décimaux (= écrits en base 10) peuvent s'écrire en binaire (= base 2).
 
 un nombre binaire est composé de bits.  
-1 bit = `0` ou `1`
+1 bit = `0` ou `1`.  
+
+sur n bits, on peut coder 2<sup>n</sup> valeurs différentes.
 
 <details open>
 <summary>table de conversion basique</summary>
@@ -170,15 +172,16 @@ masque de sous-réseau en décimal | masque de sous-réseau en binaire | masque 
 
 le masque de sous-réseau sépare donc une adresse IP entre les bits qui servent à coder le sous-réseau (à gauche) de ceux qui servent à coder l'hôte au sein du sous-réseau (à droite). il suffit de préciser le nombre de bits qui servent à coder le sous-réseau pour en déduire le nombre de bits qui servent à coder l'hôte au sein du sous-réseau.  
 par exemple, avec un masque /26, on sait que les 26 premiers bits de l'adresse IP codent l'adresse du sous-réseau et, sachant que l'adresse IP d'un hôte est codée sur 4 octets (= 32 bits), on sait que les 6 derniers bits (= 32 - 26) codent l'adresse de l'hôte au sein du sous-réseau.  
-pour reprendre l'exemple précédent, on peut distinguer :  
+par exemple :  
 
-`01101000.11000110.11110001.01111101/25`  
-(= `01101000.11000110.11110001.01111101` avec le masque `/25`)  
-&rarr; `01101000.11000110.11110001.0` (les 25 premiers bits) + `1111101` (le reste)  
-&rarr; adresse du sous-réseau : `01101000.11000110.11110001.00000000`  
-&rarr; adresse de l'hôte au sein du sous-réseau : `00000000.00000000.00000000.01111101`
+`01101111.11110010.11000001.00101101/25`  
+(= `01101111.11110010.11000001.00101101` avec le masque `/25`)  
+&rarr; `01101111.11110010.11000001.0` (les 25 premiers bits) + `0101101` (le reste)  
+&rarr; adresse du sous-réseau : `01101111.11110010.11000001.00000000`  
+&rarr; adresse de l'hôte au sein du sous-réseau : `00000000.00000000.00000000.0101101`
 
-on observe que choisir un gros masque (111111111111111111100 par exemple), c'est augmenter le nombre de sous-réseaux possibles dans le réseau au détriment du nombre d'hôtes par sous-réseau.
+on observe que choisir un gros masque (11111111.11111111.11111111.11111100 par exemple), c'est augmenter le nombre de sous-réseaux possibles dans le réseau au détriment du nombre d'hôtes par sous-réseau.  
+en effet, en augmentant le masque, on augmente le nombre de bits permettant de coder le sous-réseau et on diminue le nombre de bits permettant de coder l'hôte en lui-même.
 
 dans un sous-réseau, il faut que toutes les adresses soient dans la même plage de valeurs. par exemple, sur 4 bits :
 * si le masque est 0000, il n'y a qu'un sous-réseau possible. les adresses IP peuvent être entre 0 et 15.
