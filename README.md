@@ -162,7 +162,7 @@ exemple :
 
 un masque de sous-réseau (en binaire) est toujours de la forme : "un certain nombre de 1" suivi de "un certain nombre de 0".  
 on peut le donner sous forme binaire, décimale ou CIDR.  
-la notation CIDR (Classless Inter-Domain Routing) consiste à écrire `/` + le nombre de 1 au début du masque. elle est pratique car elle permet de préciser un masque de sous-réseau directement à la fin d'une adresse IP (voir l'exemple plus bas).  
+la notation CIDR (Classless Inter-Domain Routing) consiste à écrire `/` + le nombre de 1 au début du masque. elle est pratique car elle permet de préciser un masque directement à la fin d'une adresse IP (voir l'exemple plus bas).  
 par exemple :
 masque de sous-réseau en décimal | masque de sous-réseau en binaire | masque de sous-réseau en notation CIDR
 -- | -- | --
