@@ -31,8 +31,8 @@ sur n bits, on peut coder 2<sup>n</sup> valeurs différentes.
 <table style="font-family: monospace;">
   <thead>
     <tr>
-      <th>Décimal</th>
-      <th>Binaire</th>
+      <th>décimal</th>
+      <th>binaire</th>
     </tr>
   </thead>
   <tbody>
