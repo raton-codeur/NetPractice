@@ -116,7 +116,7 @@ par exemple :
 ```
 car 
 ``` 
-9 (en décimal) = 1001 (en binaire)
+9 (en décimal) = 1011 (en binaire)
 3 (en décimal) = 0011 (en binaire)
 1 (en décimal) = 0001 (en binaire)
 ```
@@ -142,7 +142,7 @@ il établit une connexion fiable entre chaque expéditeur et récepteur, vérifi
 chaque hôte doit avoir une **adresse IP** unique ainsi qu'un **masque de sous-réseau**.   
 
 ici, les adresses IP et les masques sont codées sur 4 octets (c'est de l'IPv4).  
-donner une adresse IP ou un masque, c'est donc donner les valeurs de ses 4 octets. par exemple :
+donner une adresse IP ou un masque, c'est donc donner les valeurs de ces 4 octets. par exemple :
 adresse IP en décimal | adresse IP en binaire
 -- | --
 `128.255.0.5` | `10000000.11111111.00000000.00000101`
