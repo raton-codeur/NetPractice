@@ -197,7 +197,7 @@ on observe qu'augmenter le masque d'un bit revient à chaque fois à :
 * multiplier le nombre de plages d'adresses IP par 2 (c'est-à-dire multiplier le nombre maximal de sous-réseau dans le réseau par 2)
 * diviser le nombre maximal d'hôtes par sous-réseau par 2.
 
-attention, il faut faire la différence entre la plage des adresses possible et les valeurs effectivement possibles. lorsque je dis qu'une adresse IP doit être dans la plage de valeurs entre `min` et `max`, je sous-entends qu'elle n'est ni à `min` ni à `max`. en effet, l'adresse `min` fait déjà référence à l'adresse du sous-réseau et l'adresse `max` est l'adresse de diffusion dans ce sous-réseau.
+attention, il faut faire la différence entre la plage des adresses possible et les valeurs effectivement possibles. lorsque je dis que, dans un sous-réseau, l'adresse IP d'un hôte doit être dans la plage de valeurs entre `min` et `max`, je sous-entends qu'elle n'est ni à `min` ni à `max`. en effet, l'adresse `min` fait déjà référence à l'adresse du sous-réseau en lui-même et ne peut pas être prise telle quelle par l'un de ses hôtes. l'adresse `max` quant à elle est l'adresse de diffusion (= broadcast) de ce sous-réseau. elle sert à envoyer des paquets à tous les hôtes du sous-réseau à la fois.
 
 un **switch** connecte plusieurs hôtes dans un même sous-réseau.
 
