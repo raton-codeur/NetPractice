@@ -166,7 +166,14 @@ en décimal | en binaire | en CIDR
 192 | 11000000 | /2
 
 le masque de sous-réseau sépare donc une adresse IP entre les bits qui servent à coder le sous-réseau (à gauche) de ceux qui servent à coder l'hôte au sein du sous-réseau (à droite). il suffit de préciser le nombre de bits qui servent à coder le sous-réseau pour en déduire le nombre de bits qui servent à coder l'hôte au sein du sous-réseau.  
-par exemple, avec un masque /26, on sait que les 26 premiers bits de l'adresse IP codent l'adresse du sous-réseau. sachant que l'adresse IP d'un hôte est codée sur 4 octets (= 32 bits), on sait donc que les 6 derniers bits (= 32 - 26) codent l'adresse de l'hôte au sein du sous-réseau.  
+par exemple, avec un masque /26, on sait que les 26 premiers bits de l'adresse IP codent l'adresse du sous-réseau et, sachant que l'adresse IP d'un hôte est codée sur 4 octets (= 32 bits), on sait que les 6 derniers bits (= 32 - 26) codent l'adresse de l'hôte au sein du sous-réseau.  
+pour reprendre l'exemple précédent, on peut distinguer :  
+
+`01101000.11000110.11110001.01111101/25`  
+(= `01101000.11000110.11110001.01111101` avec le masque `/25`)  
+&rarr; `01101000.11000110.11110001.0` (les 25 premiers bits) + `1111101` (le reste)  
+&rarr; adresse du sous-réseau : `01101000.11000110.11110001.00000000`  
+&rarr; adresse de l'hôte au sein du sous-réseau : `00000000.00000000.00000000.01111101`
 
 on observe que choisir un gros masque (111111111111111111100 par exemple), c'est augmenter le nombre de sous-réseaux possibles dans le réseau au détriment du nombre d'hôtes par sous-réseau.
 
