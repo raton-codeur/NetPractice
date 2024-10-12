@@ -180,7 +180,7 @@ par exemple :
 &rarr; adresse du sous-réseau : `01101111.11110010.11000001.00000000`  
 &rarr; adresse de l'hôte au sein du sous-réseau : `00000000.00000000.00000000.0101101`
 
-on observe que choisir un gros masque (11111111.11111111.11111111.11111100 par exemple), c'est augmenter le nombre de sous-réseaux possibles dans le réseau au détriment du nombre d'hôtes par sous-réseau.  
+on observe que choisir un gros masque (`11111111.11111111.11111111.11111100` par exemple), c'est augmenter le nombre de sous-réseaux possibles dans le réseau au détriment du nombre d'hôtes par sous-réseau.  
 en effet, en augmentant le masque, on augmente le nombre de bits permettant de coder le sous-réseau et on diminue le nombre de bits permettant de coder l'hôte en lui-même.
 
 dans un sous-réseau, il faut que toutes les adresses soient dans la même plage de valeurs. par exemple, sur 4 bits :
