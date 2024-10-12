@@ -183,17 +183,18 @@ par exemple :
 on observe que choisir un gros masque (`11111111.11111111.11111111.11111100` par exemple), c'est augmenter le nombre de sous-réseaux possibles dans le réseau au détriment du nombre d'hôtes par sous-réseau.  
 en effet, en augmentant le masque, on augmente le nombre de bits permettant de coder le sous-réseau et on diminue le nombre de bits permettant de coder l'hôte en lui-même.
 
-dans un sous-réseau, il faut que toutes les adresses soient dans la même plage de valeurs. par exemple, sur 4 bits :
-* si le masque est 0000, il n'y a qu'un sous-réseau possible. les adresses IP peuvent être entre 0 et 15.
-* si le masque est 1000, il peut y avoir 2 sous-réseaux. dans un de ces sous-réseaux, les adresses IP sont soit toutes entre 0 et 7 (elles sont de la forme 0xxx en binaire), soit toutes entre 8 et 15 (elles sont de la forme 1xxx en binaire).
-* si le masque est 1100, il peut y avoir 4 sous-réseaux. les plages d'adresses IP sont :
-  * entre 0 et 3 (de la forme 00xx en binaire)
-  * entre 4 et 7 (de la forme 01xx en binaire)
-  * entre 8 et 11 (de la forme 10xx en binaire)
-  * entre 12 et 15 (de la forme 11xx en binaire)
+par ailleurs, comme tous les hôtes d'un sous-réseau doivent avoir la même adresse de sous-réseau, il faut que, dans un sous-réseau, toutes les adresses soient dans la même plage de valeurs.  
+petit exemple sur 4 bits :
+* si le masque est 0000, tous les hôtes du réseau ne peuvent qu'être dans le même sous-réseau. dans ce sous-réseau, les adresses IP peuvent être entre 0 (= 0000 en binaire) et 15 (= 1111 en binaire).
+* si le masque est 1000, il peut y avoir 2 sous-réseaux dans le réseau. dans un de ces sous-réseaux, les adresses IP sont soit toutes entre 0 et 7 (elles sont de la forme 0xxx en binaire), soit toutes entre 8 et 15 (elles sont de la forme 1xxx en binaire).
+* si le masque est 1100, il peut y avoir 4 sous-réseaux dans le réseau. les plages d'adresses IP sont :
+  * entre 0 et 3 (= de la forme 00xx en binaire)
+  * entre 4 et 7 (= de la forme 01xx en binaire)
+  * entre 8 et 11 (= de la forme 10xx en binaire)
+  * entre 12 et 15 (= de la forme 11xx en binaire)
 
 on observe qu'augmenter le masque d'un bit revient à chaque fois à :
-* multiplier le nombre de plages d'adresses IP par 2 (c'est-à-dire multiplier le nombre maximal de sous-réseau par 2)
+* multiplier le nombre de plages d'adresses IP par 2 (c'est-à-dire multiplier le nombre maximal de sous-réseau dans le réseau par 2)
 * diviser le nombre maximal d'hôtes par sous-réseau par 2.
 
 attention, il faut faire la différence entre la plage des adresses possible et les valeurs effectivement possibles. lorsque je dis qu'une adresse IP doit être dans la plage de valeurs entre `min` et `max`, je sous-entends qu'elle n'est ni à `min` ni à `max`. en effet, l'adresse `min` fait déjà référence à l'adresse du sous-réseau et l'adresse `max` est l'adresse de diffusion dans ce sous-réseau.
