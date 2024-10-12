@@ -92,9 +92,9 @@ sur n bits, on peut coder 2<sup>n</sup> valeurs différentes.
 1 octet = 8 bits
 
 on peut coder 2<sup>8</sup> = 256 valeurs différentes sur un octet.  
-ces valeurs vont de
+ces valeurs vont de 
 ```
-0 (décimal) = 00000000 (binaire)
+0 (décimal) = 0 (binaire)
 ```
 à
 ```
