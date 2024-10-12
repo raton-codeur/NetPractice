@@ -130,11 +130,11 @@ chaque appareil connecté est appelé un **hôte**.
 
 les données à envoyer sont divisées en **paquets**.  
 
-**IP** est le protocole d'adressage (&rarr; couche réseau dans le modèle OSI).  
+**IP** (Internet Protocol) est le protocole d'adressage (&rarr; couche réseau dans le modèle OSI).  
 il utilise les adresses des hôtes du réseau (les fameuses **adresses IP**) pour adresser correctement chaque paquet transmis.  
 IP assure que les paquets arrivent à la bonne destination, mais il ne garantit ni leur ordre ni leur fiabilité.
 
-**TCP** est le protocole de contrôle des transmissions (&rarr; couche transport dans le modèle OSI).  
+**TCP** (Transmission Control Protocol) est le protocole de contrôle des transmissions (&rarr; couche transport dans le modèle OSI).  
 il établit une connexion fiable entre chaque expéditeur et récepteur, vérifie que les paquets sont bien reçus (sinon, il les retransmet) et qu'ils arrivent dans le bon ordre (sinon, il les reclasse).
 
 chaque hôte doit avoir une **adresse IP** unique ainsi qu'un **masque de sous-réseau**.   
@@ -159,8 +159,9 @@ exemple :
 
 > c'est équivalent de dire que l'adresse du sous-réseau s'obtient en faisant l'opération binaire ET entre l'adresse IP et le masque de sous-réseau.
 
-un masque de sous-réseau est toujours de la forme : "un certain nombre de 1" suivi de "un certain nombre de 0". par exemple : 111111100000.  
-on peut le donner sous forme binaire, décimale ou CIDR (`/` + le nombre de 1 au début du masque). par exemple, sur 8 bits :
+un masque de sous-réseau (en binaire) est toujours de la forme : "un certain nombre de 1" suivi de "un certain nombre de 0" (par exemple : 11111111.11111111.11110000.00000000).  
+on peut le donner sous forme binaire, décimale ou CIDR.  
+la notation CIDR (Classless Inter-Domain Routing) consiste à utiliser `/` + le nombre de 1 au début du masque. par exemple, sur 8 bits :
 en décimal | en binaire | en CIDR
 -- | -- | --
 192 | 11000000 | /2
