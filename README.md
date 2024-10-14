@@ -311,7 +311,7 @@ il suffit d'utiliser une adresse identique sur les 3 premiers octets.
 
 c'est la même chose sauf que le sous-réseau est codé sur les 2 premiers octets.
 
-aucun problème à utiliser `221.191.190.1` par exemple.
+aucun problème à utiliser `211.191.0.75` ou `211.191.76.1` par exemple.
 
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
