@@ -27,7 +27,7 @@ un nombre binaire est composé de bits.
 sur n bits, on peut coder 2<sup>n</sup> valeurs différentes.
 
 <details open>
-<summary>table de conversion</summary>
+<summary>quelques conversions</summary>
 <table style="font-family: monospace;">
   <thead>
     <tr>
@@ -185,9 +185,9 @@ en effet, en augmentant le masque, on augmente le nombre de bits permettant de c
 
 par ailleurs, comme tous les hôtes d'un sous-réseau doivent avoir la même adresse de sous-réseau, il faut que, dans un sous-réseau, toutes les adresses soient dans la même plage de valeurs.  
 petit exemple sur 4 bits :
-* si le masque est 0000, tous les hôtes du réseau ne peuvent qu'être dans le même sous-réseau. dans ce sous-réseau, les adresses IP peuvent être entre 0 (= 0000 en binaire) et 15 (= 1111 en binaire).
-* si le masque est 1000, il peut y avoir 2 sous-réseaux dans le réseau. dans un de ces sous-réseaux, les adresses IP sont soit toutes entre 0 et 7 (elles sont de la forme 0xxx en binaire), soit toutes entre 8 et 15 (elles sont de la forme 1xxx en binaire).
-* si le masque est 1100, il peut y avoir 4 sous-réseaux. les plages d'adresses IP sont :
+* si le masque est `0000`, tous les hôtes du réseau ne peuvent qu'être dans le même sous-réseau. dans ce sous-réseau, les adresses IP peuvent être entre 0 (= 0000 en binaire) et 15 (= 1111 en binaire).
+* si le masque est `1000`, il peut y avoir 2 sous-réseaux dans le réseau. dans un de ces sous-réseaux, les adresses IP sont soit toutes entre 0 et 7 (elles sont de la forme 0xxx en binaire), soit toutes entre 8 et 15 (elles sont de la forme 1xxx en binaire).
+* si le masque est `1100`, il peut y avoir 4 sous-réseaux. les plages d'adresses IP sont :
   * entre 0 et 3 (= de la forme 00xx en binaire)
   * entre 4 et 7 (= de la forme 01xx en binaire)
   * entre 8 et 11 (= de la forme 10xx en binaire)
