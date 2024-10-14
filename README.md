@@ -209,19 +209,19 @@ attention, il faut faire la différence entre la plage des adresses possibles et
 
 <img src="img/1.jpg" height="150px" />
 
-par exemple, pour 128, les adresses IP d'un sous-réseau sont :
+<span id="m128"></span>par exemple, pour 128, les adresses IP d'un sous-réseau sont :
 * soit toutes entre 0 et 127 (sous-entendu : entre 1 et 126)
 * soit toutes entre 128 et 255 (sous-entendu : entre 129 et 254)
 
 --- 
 
-pour le masque 1110 0000 = 224, il y a 3 bits pour différencier les adresses réseaux donc il y a 2<sup>3</sup> = 8 plages d'adresses possibles :
+<span id="m224"></span>pour le masque 1110 0000 = 224, il y a 3 bits pour coder les adresses réseaux et 5 bits pour coder les hôtes d'un sous-réseaux. donc il y a 8 (= 2<sup>3</sup>) plages d'adresses possibles qui vont de 32 en 32 (= 2<sup>5</sup>) :
 
 <img src="img/3.jpg" height="100px" />
 
 ---  
 
-pour le masque 1111 0000 = 240, les plages vont de 16 en 16 :
+<span id="m240"></span>pour le masque 1111 0000 = 240, les plages vont de 16 en 16 :
 
 <img src="img/13.png" height="50px" />
 
@@ -231,7 +231,7 @@ pour le masque 1111 0000 = 240, les plages vont de 16 en 16 :
 
 ---
 
-<img src="img/14.png" height="300px" />
+<span id="m252"></span><img src="img/14.png" height="300px" />
 
 c'est le plus gros masque possible. il ne laisse la place que de coder 2 hôtes par sous-réseau.
 
@@ -297,7 +297,7 @@ lorsqu'un sous-réseau est connecté à Internet, les adresses IP suivantes ne p
 
 ## niveau 1
 
-<img src="solution/1.png" width="100%" />
+<img src="img/solution/1.png" width="100%" />
 
 ### premier réseau
 
@@ -315,55 +315,98 @@ c'est la même chose sauf que le sous-réseau est codé sur les 2 premiers octet
 
 ## niveau 2
 
-<img src="solution/2.png" width="100%" />
+<img src="img/solution/2.png" width="100%" />
+
+### premier réseau
+
+c'est encore un unique sous-réseau.
+
+```
+224 (en base 10) = 1110 0000 (en binaire)
+```
+
+donc on sait que le sous-réseau est codé sur les 27 premiers bits des adresses IP.  
+
+les 3 premiers octets des adresses IP doivent rester identiques et, pour le dernier octet, on sait qu'il est divisé en 8 plages de valeurs qui vont de 32 en 32 (cf. <a href="#m224">plages avec 224</a>).  
+comme on doit être dans la même plage que 222, qui est < 224, on peut choisir 221 par exemple.
+
+### deuxième réseau
+
+on a bien `/30` &equiv; `255.255.255.252`.
+
+voir : <a href="#m252">plages avec 252</a>
 
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
 ## niveau 3
 
-<img src="solution/3.png" width="100%" />
+<img src="img/solution/3.png" width="100%" />
+
+on a un sous-réseau composé de 3 hôtes reliés par un switch.
+
+le masque imposé indique que le sous-réseau est codé sur les 25 premiers bits.
+
+l'adresse IP imposée indique que le dernier octet des adresses IP doit être entre 0 et 127 (cf. <a href="#m128">plages avec 128</a>)
 
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
 ## niveau 4
 
-<img src="solution/4.png" width="100%" />
+<img src="img/solution/.png" width="100%" />
+
+on a un sous-réseau de 2 hôtes connecté à un routeur.
+
+le routeur a 3 interfaces, il relie donc 3 sous-réseaux, et on doit faire attention à ce que les plages de valeurs de ces 3 sous-réseaux ne se chevauchent pas.
+
+sur l'interface R3, on est en /26 (cf. <a href="#m128">plages avec 192</a>) et le dernier octet est à 244, ce qui est > 192. donc toute la plage d'adresses de 109.172.119.192 à 109.172.119.255 est réservée pour ce sous-réseau.
+
+sur l'interface R2, on est en /25 (cf. <a href="#m128">plages avec 128</a>) et le dernier octet est à 1, ce qui est < 128. donc toute la plage d'adresses de 109.172.119.0 à 109.172.119.127 est réservée pour ce sous-réseau.
+
+l'adresse IP de l'interface A1 impose que les adresses de R1 et B1 commencent par 109.172.119 et soient dans la même plage que 132 sur le dernier octet.  
+
+les adresses libres sur le dernier octet vont de 109.172.119.128 à 109.172.119.191.
+
+un masque /30 ne suffirait pas à coder 3 interfaces différentes au sein du sous-réseau. je choisis donc un /28, par exemple, ce qui permet de coder 14 hôtes par sous-réseau (cf. <a href="#m240">plages avec 240</a>).  
+
+
+
+
 
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
 ## niveau 5
 
-<img src="solution/5.png" width="100%" />
+<img src="img/solution/5.png" width="100%" />
 
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
 ## niveau 6
 
-<img src="solution/6.png" width="100%" />
+<img src="img/solution/6.png" width="100%" />
 
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
 ## niveau 7
 
-<img src="solution/7.png" width="100%" />
+<img src="img/solution/7.png" width="100%" />
 
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
 ## niveau 8
 
-<img src="solution/8.png" width="100%" />
+<img src="img/solution/8.png" width="100%" />
 
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
 ## niveau 9
 
-<img src="solution/9.png" width="100%" />
+<img src="img/solution/9.png" width="100%" />
 
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
 ## niveau 10 
 <span style="text-align: right;"></span>
 
-<img src="solution/10.png" width="100%" />
+<img src="img/solution/10.png" width="100%" />
 
 [&uarr; retour au sommaire &uarr;](#sommaire)
