@@ -5,7 +5,7 @@
 <!-- no toc -->
   - [rappels sur le binaire](#rappels-sur-le-binaire)
   - [la base sur les réseaux](#la-base-sur-les-réseaux)
-  - [division d'un octet par plages selon le masque](#division-dun-octet-par-plages-selon-le-masque)
+  - [division d'un octet par plages de valeurs selon le masque](#division-dun-octet-par-plages-de-valeurs-selon-le-masque)
   - [encore quelques précisions](#encore-quelques-précisions)
   - [niveau 1](#niveau-1)
   - [niveau 2](#niveau-2)
