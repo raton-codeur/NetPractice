@@ -461,12 +461,12 @@ moi, j'utilise des plages de 16 en 16 partout (cf. <a href="#m240">plages de 240
 il y a 5 sous-réseaux.
 
 je vous conseille de suivre ces étapes :
-* faire communiquer A et B entre eux
-* faire communiquer C et D entre eux
+* connecter A et B entre eux
+* connecter C et D entre eux
 * connecter A et B à Internet
 * connecter C et D à Internet
 
-le plus simple est de distinguer un sous-réseau pour A et B et un autre pour C et D, mais on peut aussi tout faire dans la plage imposée par D en /8 par exemple (voir ma deuxième solution ci-dessous).
+le plus simple est de distinguer un sous-réseau pour A et B et un autre pour C et D, mais on peut aussi tout faire dans la plage imposée par D en /8 par exemple (voir ci-dessous).
 
 j'utilise `0.0.0.0/25` comme adresse de sous-réseau pour A et B. je reporte donc ce sous-réseau dans la destination des paquets d'Internet vers A.
 
@@ -490,5 +490,31 @@ on peut même remplacer la destination du routeur R1 par `default`.
 <span style="text-align: right;"></span>
 
 <img src="img/solution/10.png" width="100%" />
+
+encore une fois, il y a 5 sous-réseaux.
+
+je vous conseille de suivre ces étapes :
+* connecter H1 et H2 entre eux
+* connecter H3 et H4 entre eux
+* compléter les tables de routage
+
+toutes les adresses sont identiques sur les 3 premiers octets. il faut donc juste faire attention au chevauchement des plages sur le dernier octet. 
+
+dans le premier sous-réseau (pour H1 et H2), on nous impose de rester entre `138.177.41.0` et `138.177.41.127` (cf. <a href="#m128">plages pour 128</a>).
+
+dans le sous-réseau du milieu (pour R13 et R21), on nous impose de rester entre `138.177.41.252` et `138.177.41.255` (cf. <a href="#m252">plages pour 252</a>).
+
+dans le sous-réseau de H4, on nous impose la plage entre `138.177.41.128` et `138.177.41.191` (cf. <a href="#m128">plages pour 192</a>).
+
+à ce stade, il ne reste donc disponibles que les adresses entre `138.177.41.192` et `138.177.41.251` pour le sous-réseau de H3. il faut donc utiliser un masque qui permette de coder au plus 59 valeurs (= 251 - 192) par plage. le plus simple est d'utiliser un masque /30 mais on peut aussi utiliser :
+* le masque /29 qui va de 8 en 8
+* le masque /28 qui va de 16 en 16
+* le masque /27 qui va de 32 en 32
+
+si on utilisait le masque /26 et la plage contenant 193, on réserverait la plage de `138.177.41.192` à `138.177.41.255` et on chevaucherait le sous-réseau du milieu.
+
+en sous-réseau de destination d'Internet, on peut utiliser les 3 premiers octets des adresses des hôtes.
+
+en destination de R1, on peut utiliser le sous-réseau de H3 ou simplement `default`.
 
 [&uarr; retour au sommaire &uarr;](#sommaire)
