@@ -288,7 +288,7 @@ il est forcément associé à une table de routage.
 
 on peut voir Internet comme un hôte qui n'a pas d'adresse IP en particulier.
 
-lorsqu'un sous-réseau est connecté à Internet, les adresses IP suivantes ne peuvent pas être utilisées. en effet, elles sont réservées aux réseaux privés (ou réseaux locaux) déconnectés d'Internet :
+lorsqu'un sous-réseau est connecté à Internet, les adresses IP suivantes ne peuvent pas être utilisées. en effet, elles sont réservées aux réseaux privés (ou réseaux locaux) déconnectés d'Internet.
 * 192.168.x.x (en /16)
 * de 172.16.x.x à 172.31.x.x (en /12)
 * 10.x.x.x (/8)
@@ -366,7 +366,7 @@ sur l'interface R2, on est en /25 (cf. <a href="#m128">plages avec 128</a>) et l
 les adresses libres sur le dernier octet vont de `117.122.115.128` à `117.122.115.191`. cela correspond à un intervale de 64 valeurs, donc au masque /26 (cf. <a href="#m128">plages avec 192</a>).
 
 on aurait très bien pu augmenter le masque pour restreindre le nombre d'hôtes que l'on peut coder sur le dernier octet.  
-un masque /30 ne suffirait pas à coder 3 interfaces différentes au sein du sous-réseau. en revenche, on peut choisir un /28, par exemple, ce qui permet de coder 14 (= 16 - 2) hôtes par sous-réseau (cf. <a href="#m240">plages avec 240</a>).  
+un masque /30 ne suffirait pas à coder 3 interfaces différentes au sein du sous-réseau. en revanche, on peut choisir un /28, par exemple, ce qui permet de coder 14 (= 16 - 2) hôtes par sous-réseau (cf. <a href="#m240">plages avec 240</a>).  
 en /28, les plages vont de 16 en 16, donc on aurait pu utiliser toutes les adresses qui sont dans la même plage que 132, c'est-à-dire, dans l'intervalle entre 128 et 143 (= 128 + 16 exclu).  
 on aurait aussi pu utiliser un /29 ou un /27, mais pas un /25 car il aurait réservé la plage entre `117.122.115.128` et `117.122.115.255` et, comme nous l'avons dit, la plage entre `117.122.115.192` et `117.122.115.255` est déjà réservée par l'interface R3.
 
@@ -375,6 +375,19 @@ on aurait aussi pu utiliser un /29 ou un /27, mais pas un /25 car il aurait rés
 ## niveau 5
 
 <img src="img/solution/5.png" width="100%" />
+
+aucun risque de chevauchement puisque les adresses IP n'ont rien à voir l'une avec l'autre.
+
+en revanche, lorsqu'un paquet doit aller d'un hôte à l'autre, il a besoin de passer par la table de routage.
+
+en effet, en partant de A, si l'adresse de destination est l'adresse IP de B, un paquet ne peut pas savoir de lui-même qu'il doit se rendre au routeur. il faut le lui préciser dans la table de routage de A.
+
+en destination, on peut donc mettre l'adresse du sous-réseau de B, c'est-à-dire par exemple : 
+* `158.87.36.255/18`
+* `158.87.63.255/18` (on est toujours dans la plage < 64 avec le masque 192)
+* `158.87.0.0/0` (sans utiliser le masque)
+
+le plus simple c'est de mettre `default` en destination.
 
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
