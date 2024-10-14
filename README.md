@@ -371,7 +371,7 @@ on aurait très bien pu augmenter le masque pour restreindre le nombre d'hôtes 
 
 un masque /30 ne suffirait pas à coder 3 interfaces différentes au sein du sous-réseau. en revanche, on peut choisir un /28, par exemple, ce qui permet de coder 14 (= 16 - 2) hôtes par sous-réseau (cf. <a href="#m240">plages avec 240</a>).
 
-en /28, les plages vont de 16 en 16, donc on aurait pu utiliser toutes les adresses qui sont dans la même plage que `117.122.115.132`, c'est-à-dire, dans l'intervalle entre `117.122.115.128` et `117.122.115.143` (car 128 + 16 + 144).
+en /28, les plages vont de 16 en 16, donc on aurait pu utiliser toutes les adresses qui sont dans la même plage que `117.122.115.132`, c'est-à-dire, dans l'intervalle entre `117.122.115.128` et `117.122.115.143` (car 128 + 16 = 144).
 
 on aurait aussi pu utiliser un /29 ou un /27, mais pas un /25 car il aurait réservé la plage entre `117.122.115.128` et `117.122.115.255` et, comme nous l'avons dit, la plage entre `117.122.115.192` et `117.122.115.255` est déjà réservée par l'interface R3.
 
@@ -389,8 +389,8 @@ en effet, en partant de A, si l'adresse de destination est l'adresse IP de B, un
 
 en destination, on peut donc mettre l'adresse du sous-réseau de B, c'est-à-dire par exemple : 
 * `158.87.36.255/18`
-* `158.87.63.255/18` (on est toujours dans la plage <a 64 avec le masque 192)
-* `158.87.0.0/0` (on utilise pas le masque)
+* `158.87.63.255/18` (ce qui est toujours dans la plage < 64 avec le masque 192)
+* `158.87.0.0/0` (c'est l'adresse du sous-réseau, sans masque)
 
 le plus simple c'est de mettre `default` en destination.
 
@@ -402,7 +402,7 @@ le plus simple c'est de mettre `default` en destination.
 
 il y a 2 sous-réseaux.
 
-dans le sous-réseau de A, le dernier octet doit être > 128.
+dans le sous-réseau de A, le dernier octet doit être > 128 (cf. <a href="#m128">plages pour 128</a>).
 
 la table de routage du routeur s'occupe d'envoyer les paquets de A vers Internet.
 
@@ -422,12 +422,14 @@ cela permet d'utiliser `105.198.14` au début de chaque adresse IP et de défini
 * de 252 à 255 pour le sous-réseau du milieu
 * de 4 à 7 (par exemple) pour le sous-réseau de C
 
-on peut aussi utiliser un masque /29, /28, /27 ou /26, mais pas /25 car cela ne ferait que 2 plages possibles sur le dernier octet (cf. <a href="#m128">plages pour 128</a>).
+on peut aussi utiliser un masque /29, /28, /27 ou /26, mais pas /25 car cela ne ferait que 2 plages possibles dans le dernier octet (cf. <a href="#m128">plages pour 128</a>).
 
 autre exemple, en /26 on peut utiliser :
 * de `105.198.14.0` à `105.198.14.63` pour le sous-réseau de A
 *  de `105.198.14.192` à `105.198.14.255` pour le sous-réseau du milieu
 *  de `105.198.14.64` à `105.198.14.127` (ou de `105.198.14.128` à `105.198.14.191`) pour le sous-réseau de C
+
+là encore, on peut spécifier les destinations des tables de routage en utilisant les adresses réseau de A et C mais le plus simple est d'utiliser `default`.
 
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
