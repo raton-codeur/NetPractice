@@ -6,7 +6,7 @@
   - [rappels sur le binaire](#rappels-sur-le-binaire)
   - [la base sur les réseaux](#la-base-sur-les-réseaux)
   - [division d'un octet par plages de valeurs selon le masque](#division-dun-octet-par-plages-de-valeurs-selon-le-masque)
-  - [encore quelques précisions](#encore-quelques-précisions)
+  - [les équipements réseau](#les-équipements-réseau)
   - [niveau 1](#niveau-1)
   - [niveau 2](#niveau-2)
   - [niveau 3](#niveau-3)
@@ -237,22 +237,32 @@ c'est le plus gros masque possible. il ne laisse la place que de coder 2 hôtes 
 
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
-## encore quelques précisions
+## les équipements réseau
+
+on a déjà vu les hôtes. voici les autres équipements qui composent les réseaux dans les exercices.
+
+### le switch
 
 un **switch** permet de connecter plusieurs hôtes dans un même sous-réseau.  
 dans les exercices, il ressemble à ça :  
 
 <img src="img/20.png" height="300px" />
 
+### le routeur
+
 un **routeur** permet de connecter plusieurs sous-réseaux entre eux.  
 dans les exercices, il ressemble à ça :  
 
 <img src="img/21.png" height="300px" />
 
+il possède, lui-aussi, des **interfaces réseau** (une par sous-réseau connecté).  
+pour faire simple, une interface réseau est un point de connexion dans le réseau, identifié par une adresse IP (qui doit être unique) et un masque de sous-réseau. 
 
 lorsque plusieurs sous-réseaux sont connectés, la plage d'adresses IP de chaque sous-réseau ne doit pas chevaucher celle des autres !
 
-une **table de routage** est utilisée à un endroit précis du réseau () pour définir la prochaine adresse à laquelle il faut envoyer un paquet lorsque l'adresse de destination de celui-ci est trop éloignée (on comprendra mieux en faisant les exercices).  
+### la table de routage
+
+une **table de routage** est utilisée à un endroit précis du réseau (hôte, routeur, ...) pour définir la prochaine adresse à laquelle il faut envoyer un paquet lorsque l'adresse de destination de celui-ci est trop éloignée (on comprendra mieux en faisant les exercices).  
 c'est une liste d'associations :  
 
 * adresse de sous-réseau de destination &rarr; adresse IP suivante  
