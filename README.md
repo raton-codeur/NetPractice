@@ -473,7 +473,7 @@ je vous conseille de suivre ces étapes :
 
 le plus simple est de distinguer un sous-réseau pour A et B et un autre pour C et D, mais on peut aussi tout faire dans la plage imposée par D en /8 par exemple (voir ci-dessous).
 
-j'utilise `0.0.0.0/25` comme adresse de sous-réseau pour A et B. je reporte donc ce sous-réseau dans la destination des paquets d'Internet vers A.
+j'utilise `0.0.0.0/25` comme adresse de sous-réseau de A et B. je reporte donc ce sous-réseau dans la destination des paquets d'Internet vers A.
 
 le sous-réseau de D est imposé par la table de routage de D.
 
@@ -481,7 +481,7 @@ j'utilise le même masque que pour D dans le sous-réseau de C, en utilisant une
 
 pour que les paquets d'Internet à destination de C trouvent leur chemin, je reporte le sous-réseau de C dans la table de routage d'Internet.
 
-enfin, il faut comprendre que la table de routage de R1 sert à envoyer les paquets vers C et D et que la table de routage de R2 sert à les renvoyer dans l'autre sens.
+enfin, il faut comprendre que la table de routage de R1 sert à envoyer les paquets vers C et D (et Internet) et que la table de routage de R2 sert à les renvoyer dans l'autre sens.
 
 une autre solution un peu moins propre :
 
@@ -520,6 +520,6 @@ si on utilisait /26 avec l'adresse `138.177.41.193`, on réserverait la plage de
 
 en sous-réseau de destination d'Internet, on peut utiliser les 3 premiers octets des adresses des hôtes.
 
-en destination de R1, on peut utiliser le sous-réseau de H3 ou simplement `default`.
+en destination de R1, on peut utiliser le sous-réseau de H3 (c'est le seul qui n'est pas connecté) ou simplement `default`.
 
 [&uarr; retour au sommaire &uarr;](#sommaire)
