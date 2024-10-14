@@ -280,7 +280,7 @@ lorsque l'adresse de destination de la table est à `default` (ou `0.0.0.0/0`) a
 
 ### Internet
 
-<img src="img/24.png" height="200px" />
+<img src="img/24.png" height="300px" />
 
 les adresses IP suivantes sont réservées aux réseaux privés (ou réseaux locaux), c'est-à-dire, déconnectés d'Internet :
 * 192.168.x.x
