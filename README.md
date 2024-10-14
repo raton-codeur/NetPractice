@@ -337,6 +337,8 @@ comme on doit être dans la même plage que 222, qui est < 224, on peut choisir 
 
 voir les <a href="#m252">plages avec 252</a>.
 
+les adresses 127.x.x.x sont réservées pour le **loopback**, aussi appelé **localhost**, qui consiste à renvoyer des paquets vers son expéditeur sans passer par le réseau.
+
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
 ## niveau 3
@@ -385,7 +387,7 @@ en effet, en partant de A, si l'adresse de destination est l'adresse IP de B, un
 en destination, on peut donc mettre l'adresse du sous-réseau de B, c'est-à-dire par exemple : 
 * `158.87.36.255/18`
 * `158.87.63.255/18` (on est toujours dans la plage < 64 avec le masque 192)
-* `158.87.0.0/0` (sans utiliser le masque)
+* `158.87.0.0/0` (on utilise pas le masque)
 
 le plus simple c'est de mettre `default` en destination.
 
@@ -395,17 +397,60 @@ le plus simple c'est de mettre `default` en destination.
 
 <img src="img/solution/6.png" width="100%" />
 
+il y a 2 sous-réseaux.
+
+dans le sous-réseau de A, le dernier octet doit être > 128.
+
+la table de routage du routeur s'occupe d'envoyer les paquets de A vers Internet.
+
+pour qu'un paquet puisse passer d'Internet au sous-réseau de A, il faut donner l'adresse du sous-réseau de A à la table de routage d'Internet.
+
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
 ## niveau 7
 
 <img src="img/solution/7.png" width="100%" />
 
+il y a 3 sous-réseaux.
+
+le nombre d'interfaces par sous-réseau n'étant jamais > 2, on peut utiliser un masque /30.  
+cela permet d'utiliser `105.198.14` au début de chaque adresse IP et de définir 4 plages distinctes sur le dernier octet :
+* de 0 et 3 pour R11 et A1
+* de 252 à 255 pour R12 et R21
+* de 4 à 7 (par exemple) pour R22 et C1
+
+on peut aussi utiliser un masque /29, /28, /27 ou /26, mais pas /25 car cela ne ferait que 2 plages possibles sur le dernier octet (cf. <a href="#m128">plages pour 128</a>).
+
+autre exemple, en /26 on peut utiliser :
+* de `105.198.14.0` à `105.198.14.63` pour R11 et A1
+*  de `105.198.14.192` à `105.198.14.255` pour R12 et R21
+*  de `105.198.14.64` à `105.198.14.127` (ou de `105.198.14.128` à `105.198.14.191`) pour R22 et C1
+
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
 ## niveau 8
 
 <img src="img/solution/8.png" width="100%" />
+
+il y a 4 sous-réseaux.
+
+la table de routage d'Internet sert à désigner l'adresse IP du routeur R1 lorsqu'Internet veut envoyer des paquets à C ou D. cela nous indique que C et D doivent avoir pour adresse de sous-réseau `138.250.20.0/26`, c'est-à-dire qu'ils se trouvent dans la plage entre `138.250.20.0` et `138.250.20.191` (cf. <a href="#m128">plages pour 192</a>). 
+
+la table de routage de R1 sert à diriger les paquets, soit vers Internet (par défaut), soit vers C et D losqu'ils cherchent le sous-réseau `138.250.20.0/26`.
+
+la table de routage du routeur R2 sert forcément à diriger les paquets vers Internet (sinon, elle ne servirait à rien car C et D sont directement accessibles à partir d'ici). cela nous indique que le sous-réseau composé de R13 et R21 utilise une plage contenant `138.250.20.62`.
+
+les 3 sous-réseaux du bas utilisent donc une adresse IP identique sur les 3 premiers octets.
+
+dans le sous-réseau de D on peut utiliser, par exemple, les 16 premières valeurs de l'octet (de 0 à 15).
+
+pour le reste des sous-réseaux, on est libre d'utiliser les masques qu'on veut. on peut notamment utiliser /30 car il n'y a que 2 interfaces à chaque fois.  
+
+remarque pour R13 : `138.250.20.63` est forcément une adresse de broadcast car 64 est le début d'une nouvelle plage de valeurs.
+
+l'adresse du sous-réseau de C doit être entre `138.250.20.0` et `138.250.20.191` - l'intervalle des 16 valeurs du sous-réseau de D - l'intervalle de x valeurs du sous-réseau qui contient 62.
+
+moi, j'utilise des plages de 16 en 16 partout (cf. <a href="#m240">plages de 240</a>).
 
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
