@@ -511,7 +511,7 @@ dans le sous-réseau de H4, on nous impose la plage entre `138.177.41.128` et `1
 * le /28 qui va de 16 en 16
 * le /27 qui va de 32 en 32
 
-si on utilisait le masque /26 et la plage contenant 193, on réserverait la plage de `138.177.41.192` à `138.177.41.255` et on chevaucherait le sous-réseau du milieu.
+si on utilisait /26 avec l'adresse `138.177.41.193`, on réserverait la plage de `138.177.41.192` à `138.177.41.255` et on chevaucherait le sous-réseau du milieu.
 
 en sous-réseau de destination d'Internet, on peut utiliser les 3 premiers octets des adresses des hôtes.
 
