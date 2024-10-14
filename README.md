@@ -280,12 +280,18 @@ lorsque l'adresse de destination de la table est à `default` (ou `0.0.0.0/0`) a
 
 ### Internet
 
+le fameux réseau mondial de l'Internet est représenté ainsi :
+
 <img src="img/24.png" height="250px" />
 
-les adresses IP suivantes sont réservées aux réseaux privés (ou réseaux locaux), c'est-à-dire, déconnectés d'Internet :
-* 192.168.x.x
-* de 172.16.x.x à 172.31.x.x
-* 10.x.x.x
+il est forcément associé à une table de routage.  
+
+on peut voir Internet comme un hôte qui n'a pas d'adresse IP en particulier.
+
+lorsqu'un sous-réseau est connecté à Internet, les adresses IP suivantes ne peuvent pas être utilisées. en effet, elles sont réservées aux réseaux privés (ou réseaux locaux) déconnectés d'Internet :
+* 192.168.x.x (en /16)
+* de 172.16.x.x à 172.31.x.x (en /12)
+* 10.x.x.x (/8)
 
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
