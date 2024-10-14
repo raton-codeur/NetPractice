@@ -439,7 +439,7 @@ là encore, on peut spécifier les destinations des tables de routage en utilisa
 
 il y a 4 sous-réseaux.
 
-la table de routage d'Internet sert à désigner l'interface du routeur R1 lorsqu'Internet veut envoyer des paquets à C ou D. cela nous indique que C et D doivent avoir pour adresse de sous-réseau `138.250.20.0/26`, et donc, qu'ils se trouvent dans la plage entre `138.250.20.0` et `138.250.20.191` (cf. <a href="#m128">plages pour 192</a>). 
+la table de routage d'Internet sert à désigner l'interface du routeur R1 lorsqu'Internet veut envoyer des paquets à C ou D. cela nous indique que C et D doivent avoir pour adresse de sous-réseau `138.250.20.0/26`, et donc, qu'ils se trouvent dans la plage entre `138.250.20.0` et `138.250.20.63` (cf. <a href="#m128">plages pour 192</a>). 
 
 la table de routage de R1 sert à diriger les paquets, soit vers Internet (par défaut), soit vers C et D lorsqu'ils cherchent le sous-réseau `138.250.20.0/26`.
 
@@ -453,7 +453,7 @@ pour le reste des sous-réseaux, on est libre d'utiliser les masques qu'on veut.
 
 remarque pour R13 : `138.250.20.63` est forcément une adresse de broadcast car 64 est le début d'une nouvelle plage de valeurs.
 
-l'adresse du sous-réseau de C doit être entre `138.250.20.0` et `138.250.20.191` moins l'intervalle des 16 valeurs du sous-réseau de D moins l'intervalle de x valeurs du sous-réseau qui contient 62.
+l'adresse du sous-réseau de C doit être entre `138.250.20.0` et `138.250.20.63` moins l'intervalle des 16 valeurs du sous-réseau de D moins l'intervalle de x valeurs du sous-réseau qui contient 62.
 
 moi, j'utilise des plages de 16 en 16 partout (cf. <a href="#m240">plages de 240</a>).
 
