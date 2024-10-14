@@ -352,7 +352,7 @@ l'adresse IP imposée indique que le dernier octet des adresses IP doit être en
 
 ## niveau 4
 
-<img src="img/solution/.png" width="100%" />
+<img src="img/solution/4.png" width="100%" />
 
 on a un sous-réseau de 2 hôtes connecté à un routeur.
 
