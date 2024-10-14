@@ -337,7 +337,7 @@ comme on doit être dans la même plage que 222, qui est < 224, on peut choisir 
 
 on a bien `/30` &equiv; `255.255.255.252`.
 
-voir : <a href="#m252">plages avec 252</a>
+voir les <a href="#m252">plages avec 252</a>.
 
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
@@ -349,7 +349,7 @@ on a un sous-réseau composé de 3 hôtes reliés par un switch.
 
 le masque imposé indique que le sous-réseau est codé sur les 25 premiers bits. 
 
-les 3 premiers octets doivent donc être identiques et, comme le dernier octet de l'adresse IP imposée est à 125, alors le dernier octet des adresses IP doit être entre 0 et 127 (cf. <a href="#m128">plages avec 128</a>).
+les 3 premiers octets doivent donc être identiques et, comme le dernier octet de l'adresse IP imposée est à 125, le dernier octet doit être entre 0 et 127 (cf. <a href="#m128">plages avec 128</a>).
 
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
