@@ -331,11 +331,9 @@ donc on sait que le sous-réseau est codé sur les 27 premiers bits des adresses
 
 les 3 premiers octets des adresses IP doivent rester identiques et, pour le dernier octet, on sait qu'il est divisé en 8 plages de valeurs qui vont de 32 en 32 (cf. <a href="#m224">plages avec 224</a>).  
 
-comme on doit être dans la même plage que 222, qui est < 224, on peut choisir 221 par exemple.
+comme on doit être dans la même plage que 222, qui est < 224, on peut choisir 221 par exemple. 223 est forcément une adresse de broadcast car 224 est le début d'une nouvelle plage.
 
 ### deuxième réseau
-
-on a bien `/30` &equiv; `255.255.255.252`.
 
 voir les <a href="#m252">plages avec 252</a>.
 
