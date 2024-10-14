@@ -239,7 +239,7 @@ c'est le plus gros masque possible. il ne laisse la place que de coder 2 hôtes 
 
 ## les équipements réseau
 
-on a déjà vu les hôtes. voici les autres équipements qui composent les réseaux dans les exercices.
+on a déjà vu les hôtes. voici les autres équipements qui composent les réseaux de NetPractice.
 
 ### le switch
 
