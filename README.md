@@ -263,6 +263,7 @@ lorsque plusieurs sous-réseaux sont connectés, la plage d'adresses IP de chaqu
 ### la table de routage
 
 une **table de routage** est utilisée à un endroit précis du réseau (hôte, routeur, ...) pour définir la prochaine adresse à laquelle il faut envoyer un paquet lorsque l'adresse de destination de celui-ci est trop éloignée (on comprendra mieux en faisant les exercices).  
+
 c'est une liste d'associations :  
 
 * adresse de sous-réseau de destination &rarr; adresse IP suivante  
@@ -273,9 +274,13 @@ dans les exercices, ça ressemble à ça :
 
 <img src="img/22.png" height="200px" />
 
-dans cet exemple, on peut dire à cet endroit du réseau, lorsqu'un paquet veut rejoindre le sous-réseau `78.149.0.0` (= `78.149.0.2` avec le masque `/18`), alors il faut l'envoyer à l'adresse IP 
+dans cet exemple, on voit notamment que lorsqu'un paquet veut rejoindre le sous-réseau `78.149.0.0` (= `78.149.0.2` avec le masque `/18`) alors il est envoyé à `163.172.250.12`.
 
-lorsque l'adresse de destination d'une table de routage est à `default` (ou `0.0.0.0/0`) les paquets sont toujours envoyés à l'adresse IP suivante.
+lorsque l'adresse de destination de la table est à `default` (ou `0.0.0.0/0`) alors les paquets sont toujours (?) envoyés à l'adresse IP correspondante.
+
+### Internet
+
+<img src="img/24.png" height="200px" />
 
 les adresses IP suivantes sont réservées aux réseaux privés (ou réseaux locaux), c'est-à-dire, déconnectés d'Internet :
 * 192.168.x.x
