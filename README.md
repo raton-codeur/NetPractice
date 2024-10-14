@@ -482,7 +482,7 @@ une autre solution un peu moins propre :
 
 <img src="img/solution/9_2.png" width="100%" />
 
-on peut même remplacer la destination du routeur R1 par `default`.
+on peut aussi utiliser `93.191.192.113/16` comme destination du routeur R1.
 
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
