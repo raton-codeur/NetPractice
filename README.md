@@ -415,16 +415,16 @@ il y a 3 sous-réseaux.
 
 le nombre d'interfaces par sous-réseau n'étant jamais > 2, on peut utiliser un masque /30.  
 cela permet d'utiliser `105.198.14` au début de chaque adresse IP et de définir 4 plages distinctes sur le dernier octet :
-* de 0 et 3 pour R11 et A1
-* de 252 à 255 pour R12 et R21
-* de 4 à 7 (par exemple) pour R22 et C1
+* de 0 et 3 pour le sous-réseau de A
+* de 252 à 255 pour le sous-réseau du milieu
+* de 4 à 7 (par exemple) pour le sous-réseau de C
 
 on peut aussi utiliser un masque /29, /28, /27 ou /26, mais pas /25 car cela ne ferait que 2 plages possibles sur le dernier octet (cf. <a href="#m128">plages pour 128</a>).
 
 autre exemple, en /26 on peut utiliser :
-* de `105.198.14.0` à `105.198.14.63` pour R11 et A1
-*  de `105.198.14.192` à `105.198.14.255` pour R12 et R21
-*  de `105.198.14.64` à `105.198.14.127` (ou de `105.198.14.128` à `105.198.14.191`) pour R22 et C1
+* de `105.198.14.0` à `105.198.14.63` pour le sous-réseau de A
+*  de `105.198.14.192` à `105.198.14.255` pour le sous-réseau du milieu
+*  de `105.198.14.64` à `105.198.14.127` (ou de `105.198.14.128` à `105.198.14.191`) pour le sous-réseau de C
 
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
