@@ -506,7 +506,7 @@ dans le sous-réseau du milieu (pour R13 et R21), on nous impose de rester entre
 
 dans le sous-réseau de H4, on nous impose la plage entre `138.177.41.128` et `138.177.41.191` (cf. <a href="#m128">plages pour 192</a>).
 
-à ce stade, il ne reste donc disponibles que les adresses entre `138.177.41.192` et `138.177.41.251` pour le sous-réseau de H3. il faut donc utiliser un masque qui permette de coder au plus 59 valeurs (= 251 - 192) par plage. le plus simple est d'utiliser un masque /30 mais on peut aussi utiliser :
+à ce stade, il ne reste donc disponibles que les adresses entre `138.177.41.192` et `138.177.41.251` pour le sous-réseau de H3. il faut donc utiliser un masque qui permette de coder au plus 57 valeurs (= 251 - 192 - 2) par plage. le plus simple est d'utiliser un masque /30 mais on peut aussi utiliser :
 * le masque /29 qui va de 8 en 8
 * le masque /28 qui va de 16 en 16
 * le masque /27 qui va de 32 en 32
