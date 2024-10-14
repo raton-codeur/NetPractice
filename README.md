@@ -386,7 +386,7 @@ en effet, en partant de A, si l'adresse de destination est l'adresse IP de B, un
 
 en destination, on peut donc mettre l'adresse du sous-réseau de B, c'est-à-dire par exemple : 
 * `158.87.36.255/18`
-* `158.87.63.255/18` (on est toujours dans la plage < 64 avec le masque 192)
+* `158.87.63.255/18` (on est toujours dans la plage <a 64 avec le masque 192)
 * `158.87.0.0/0` (on utilise pas le masque)
 
 le plus simple c'est de mettre `default` en destination.
@@ -456,7 +456,33 @@ moi, j'utilise des plages de 16 en 16 partout (cf. <a href="#m240">plages de 240
 
 ## niveau 9
 
-<img src="img/solution/9.png" width="100%" />
+<img src="img/solution/9_1.png" width="100%" />
+
+il y a 5 sous-réseaux.
+
+je vous conseille de suivre ces étapes :
+* faire communiquer A et B entre eux
+* faire communiquer C et D entre eux
+* connecter A et B à Internet
+* connecter C et D à Internet
+
+le plus simple est de distinguer un sous-réseau pour A et B et un autre pour C et D, mais on peut aussi tout faire dans la plage imposée par D en /8 par exemple (voir ma deuxième solution ci-dessous).
+
+j'utilise `0.0.0.0/25` comme adresse de sous-réseau pour A et B. je reporte donc ce sous-réseau dans la destination des paquets d'Internet vers A.
+
+le sous-réseau de D est imposé par la table de routage de D.
+
+j'utilise le même masque que pour D dans le sous-réseau de C, en utilisant une autre plage sur le 3e octet (cf. <a href="#128">plages pour 192</a>).
+
+pour que les paquets d'Internet à destination de C trouvent leur chemin, je reporte le sous-réseau de C dans la table de routage d'Internet.
+
+enfin, il faut comprendre que la table de routage de R1 sert à envoyer les paquets vers C et D et que la table de routage de R2 sert à les renvoyer dans l'autre sens.
+
+une autre solution un peu moins propre :
+
+<img src="img/solution/9_2.png" width="100%" />
+
+on peut même remplacer la destination du routeur R1 par `default`.
 
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
