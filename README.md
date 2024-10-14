@@ -414,7 +414,7 @@ pour qu'un paquet puisse passer d'Internet au sous-réseau de A, il faut donner 
 il y a 3 sous-réseaux.
 
 le nombre d'interfaces par sous-réseau n'étant jamais > 2, on peut utiliser un masque /30.  
-cela permet d'utiliser `105.198.14` au début de chaque adresse IP et de définir 4 plages distinctes sur le dernier octet :
+cela permet d'utiliser `105.198.14` au début de chaque adresse IP et de définir 3 plages distinctes sur le dernier octet :
 * de 0 et 3 pour le sous-réseau de A
 * de 252 à 255 pour le sous-réseau du milieu
 * de 4 à 7 (par exemple) pour le sous-réseau de C
