@@ -140,7 +140,10 @@ IP assure que les paquets arrivent à la bonne destination, mais il ne garantit 
 **TCP** (Transmission Control Protocol) est le protocole de contrôle des transmissions (&rarr; couche transport dans le modèle OSI).  
 il établit une connexion fiable entre chaque expéditeur et récepteur, vérifie que les paquets sont bien reçus (sinon, il les retransmet) et qu'ils arrivent dans le bon ordre (sinon, il les reclasse).
 
-chaque hôte doit avoir une **adresse IP** unique ainsi qu'un **masque de sous-réseau**.   
+chaque hôte doit avoir une **adresse IP** unique ainsi qu'un **masque de sous-réseau**.  
+dans les exercices, ils ressemblent à ça : 
+
+<img src="img/23.png" height="300px" />
 
 ici, les adresses IP et les masques sont codées sur 4 octets (c'est de l'IPv4).  
 donner une adresse IP ou un masque, c'est donc donner les valeurs de ces 4 octets. par exemple :
@@ -241,14 +244,15 @@ dans les exercices, il ressemble à ça :
 
 <img src="img/20.png" height="300px" />
 
-un **routeur** connecte plusieurs sous-réseaux entre eux.  
+un **routeur** permet de connecter plusieurs sous-réseaux entre eux.  
 dans les exercices, il ressemble à ça :  
 
 <img src="img/21.png" height="300px" />
 
+
 lorsque plusieurs sous-réseaux sont connectés, la plage d'adresses IP de chaque sous-réseau ne doit pas chevaucher celle des autres !
 
-une **table de routage** est utilisée pour définir la prochaine adresse à laquelle il faut envoyer un paquet lorsque l'adresse de destination de celui-ci est trop éloignée (on comprendra mieux en faisant les exercices).  
+une **table de routage** est utilisée à un endroit précis du réseau () pour définir la prochaine adresse à laquelle il faut envoyer un paquet lorsque l'adresse de destination de celui-ci est trop éloignée (on comprendra mieux en faisant les exercices).  
 c'est une liste d'associations :  
 
 * adresse de sous-réseau de destination &rarr; adresse IP suivante  
@@ -258,6 +262,8 @@ c'est une liste d'associations :
 dans les exercices, ça ressemble à ça :  
 
 <img src="img/22.png" height="200px" />
+
+dans cet exemple, on peut dire à cet endroit du réseau, lorsqu'un paquet veut rejoindre le sous-réseau `78.149.0.0` (= `78.149.0.2` avec le masque `/18`), alors il faut l'envoyer à l'adresse IP 
 
 lorsque l'adresse de destination d'une table de routage est à `default` (ou `0.0.0.0/0`) les paquets sont toujours envoyés à l'adresse IP suivante.
 
