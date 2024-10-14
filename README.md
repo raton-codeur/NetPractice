@@ -197,29 +197,11 @@ on observe qu'augmenter le masque d'un bit revient à chaque fois à :
 * multiplier le nombre de plages d'adresses IP par 2 (c'est-à-dire multiplier le nombre maximal de sous-réseau dans le réseau par 2)
 * diviser le nombre maximal d'hôtes par sous-réseau par 2.
 
-attention, il faut faire la différence entre la plage des adresses possible et les valeurs effectivement possibles. lorsque je dis que, dans un sous-réseau, l'adresse IP d'un hôte doit être dans la plage de valeurs entre `min` et `max`, je sous-entends qu'elle n'est ni à `min` ni à `max`. en effet, l'adresse `min` fait déjà référence à l'adresse du sous-réseau en lui-même et ne peut pas être prise telle quelle par l'un de ses hôtes. l'adresse `max` quant à elle est l'adresse de diffusion (= broadcast) de ce sous-réseau. elle sert à envoyer des paquets à tous les hôtes du sous-réseau à la fois.
-
-un **switch** connecte plusieurs hôtes dans un même sous-réseau.
-
-un **routeur** connecte plusieurs sous-réseaux entre eux. 
-
-lorsque plusieurs sous-réseaux sont connectés, la plage d'adresses IP de chaque sous-réseau ne doit pas chevaucher celle des autres !
-
-une **table de routage** est utilisée pour définir à quelle adresse IP envoyer ensuite un paquet lorsque son adresse de destination n'est pas directement accessible. c'est une liste d'associations :  
-adresse du sous-réseau de destination &rarr; adresse IP suivante  
-adresse du sous-réseau de destination &rarr; adresse IP suivante  
-...
-
-lorsque l'adresse de destination d'une table de routage est à `default` (ou `0.0.0.0/0`) les paquets sont toujours envoyés à l'adresse IP suivante.
-
-les adresses IP suivantes sont réservées aux réseaux privés (ou réseaux locaux), c'est-à-dire, déconnectés d'Internet :
-* 192.168.x.x
-* de 172.16.x.x à 172.31.x.x
-* 10.x.x.x
+attention, il faut faire la différence entre la plage des adresses possibles et les valeurs effectivement possibles. lorsque je dis que, dans un sous-réseau, l'adresse IP d'un hôte doit être dans la plage de valeurs entre `min` et `max`, je sous-entends qu'elle n'est ni à `min` ni à `max`. en effet, l'adresse `min` fait déjà référence à l'adresse du sous-réseau en lui-même et ne peut pas être prise telle quelle par l'un de ses hôtes. l'adresse `max` quant à elle est l'adresse de diffusion (= broadcast) de ce sous-réseau. elle sert à envoyer des paquets à tous les hôtes du sous-réseau à la fois.
 
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
-## division d'un octet par plages selon le masque
+## division d'un octet par plages de valeurs selon le masque
 
 <img src="img/1.jpg" height="150px" />
 
@@ -248,6 +230,31 @@ pour le masque 1111 0000 = 240, les plages vont de 16 en 16 :
 <img src="img/14.png" height="300px" />
 
 c'est le plus gros masque possible. il ne laisse la place que de coder 2 hôtes par sous-réseau.
+
+[&uarr; retour au sommaire &uarr;](#sommaire)
+
+## encore quelques précisions
+
+un **switch** permet de connecter plusieurs hôtes dans un même sous-réseau.  
+dans les exercices, il ressemble à ça :  
+
+<img src="img/20.png" height="300px" />
+
+un **routeur** connecte plusieurs sous-réseaux entre eux. 
+
+lorsque plusieurs sous-réseaux sont connectés, la plage d'adresses IP de chaque sous-réseau ne doit pas chevaucher celle des autres !
+
+une **table de routage** est utilisée pour définir à quelle adresse IP envoyer ensuite un paquet lorsque son adresse de destination n'est pas directement accessible. c'est une liste d'associations :  
+adresse du sous-réseau de destination &rarr; adresse IP suivante  
+adresse du sous-réseau de destination &rarr; adresse IP suivante  
+...
+
+lorsque l'adresse de destination d'une table de routage est à `default` (ou `0.0.0.0/0`) les paquets sont toujours envoyés à l'adresse IP suivante.
+
+les adresses IP suivantes sont réservées aux réseaux privés (ou réseaux locaux), c'est-à-dire, déconnectés d'Internet :
+* 192.168.x.x
+* de 172.16.x.x à 172.31.x.x
+* 10.x.x.x
 
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
