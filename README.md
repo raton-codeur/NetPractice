@@ -366,7 +366,7 @@ sur l'interface R2, on est en /25 (cf. <a href="#m128">plages avec 128</a>) et l
 les adresses libres sur le dernier octet vont de `117.122.115.128` à `117.122.115.191`. cela correspond à un intervale de 64 valeurs, donc au masque /26 (cf. <a href="#m128">plages avec 192</a>).
 
 on aurait très bien pu augmenter le masque pour restreindre le nombre d'hôtes que l'on peut coder sur le dernier octet.  
-un masque /30 ne suffirait pas à coder 3 interfaces différentes au sein du sous-réseau. en revenche, on peut choisir un /28, par exemple, ce qui permet de coder 14 hôtes par sous-réseau (cf. <a href="#m240">plages avec 240</a>).  
+un masque /30 ne suffirait pas à coder 3 interfaces différentes au sein du sous-réseau. en revenche, on peut choisir un /28, par exemple, ce qui permet de coder 14 (= 16 - 2) hôtes par sous-réseau (cf. <a href="#m240">plages avec 240</a>).  
 en /28, les plages vont de 16 en 16, donc on aurait pu utiliser toutes les adresses qui sont dans la même plage que 132, c'est-à-dire, dans l'intervalle entre 128 et 143 (= 128 + 16 exclu).  
 on aurait aussi pu utiliser un /29 ou un /27, mais pas un /25 car il aurait réservé la plage entre `117.122.115.128` et `117.122.115.255` et, comme nous l'avons dit, la plage entre `117.122.115.192` et `117.122.115.255` est déjà réservée par l'interface R3.
 
