@@ -207,9 +207,9 @@ attention, il faut faire la différence entre la plage des adresses possibles et
 
 ## division d'un octet par plages de valeurs selon le masque
 
-<img src="img/1.jpg" height="150px" />
+<span id="m128"></span><img src="img/1.jpg" height="150px" />
 
-<span id="m128"></span>par exemple, pour 128, les adresses IP d'un sous-réseau sont :
+par exemple, pour 128, les adresses IP d'un sous-réseau sont :
 * soit toutes entre 0 et 127 (sous-entendu : entre 1 et 126)
 * soit toutes entre 128 et 255 (sous-entendu : entre 129 et 254)
 
