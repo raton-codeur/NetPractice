@@ -311,6 +311,8 @@ il suffit d'utiliser une adresse identique sur les 3 premiers octets.
 
 c'est la même chose sauf que le sous-réseau est codé sur les 2 premiers octets.
 
+aucun problème à utiliser `221.191.190.1` par exemple.
+
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
 ## niveau 2
@@ -328,6 +330,7 @@ c'est encore un unique sous-réseau.
 donc on sait que le sous-réseau est codé sur les 27 premiers bits des adresses IP.  
 
 les 3 premiers octets des adresses IP doivent rester identiques et, pour le dernier octet, on sait qu'il est divisé en 8 plages de valeurs qui vont de 32 en 32 (cf. <a href="#m224">plages avec 224</a>).  
+
 comme on doit être dans la même plage que 222, qui est < 224, on peut choisir 221 par exemple.
 
 ### deuxième réseau
@@ -344,9 +347,9 @@ voir : <a href="#m252">plages avec 252</a>
 
 on a un sous-réseau composé de 3 hôtes reliés par un switch.
 
-le masque imposé indique que le sous-réseau est codé sur les 25 premiers bits.
+le masque imposé indique que le sous-réseau est codé sur les 25 premiers bits. 
 
-l'adresse IP imposée indique que le dernier octet des adresses IP doit être entre 0 et 127 (cf. <a href="#m128">plages avec 128</a>)
+les 3 premiers octets doivent donc être identiques et, comme le dernier octet de l'adresse IP imposée est à 125, alors le dernier octet des adresses IP doit être entre 0 et 127 (cf. <a href="#m128">plages avec 128</a>).
 
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
