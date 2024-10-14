@@ -241,14 +241,23 @@ dans les exercices, il ressemble à ça :
 
 <img src="img/20.png" height="300px" />
 
-un **routeur** connecte plusieurs sous-réseaux entre eux. 
+un **routeur** connecte plusieurs sous-réseaux entre eux.  
+dans les exercices, il ressemble à ça :  
+
+<img src="img/21.png" height="300px" />
 
 lorsque plusieurs sous-réseaux sont connectés, la plage d'adresses IP de chaque sous-réseau ne doit pas chevaucher celle des autres !
 
-une **table de routage** est utilisée pour définir à quelle adresse IP envoyer ensuite un paquet lorsque son adresse de destination n'est pas directement accessible. c'est une liste d'associations :  
-adresse du sous-réseau de destination &rarr; adresse IP suivante  
-adresse du sous-réseau de destination &rarr; adresse IP suivante  
-...
+une **table de routage** est utilisée pour définir la prochaine adresse à laquelle il faut envoyer un paquet lorsque l'adresse de destination de celui-ci est trop éloignée (on comprendra mieux en faisant les exercices).  
+c'est une liste d'associations :  
+
+* adresse de sous-réseau de destination &rarr; adresse IP suivante  
+* adresse de sous-réseau de destination &rarr; adresse IP suivante  
+* ...
+
+dans les exercices, ça ressemble à ça :  
+
+<img src="img/22.png" height="200px" />
 
 lorsque l'adresse de destination d'une table de routage est à `default` (ou `0.0.0.0/0`) les paquets sont toujours envoyés à l'adresse IP suivante.
 
