@@ -141,7 +141,7 @@ IP assure que les paquets arrivent à la bonne destination, mais il ne garantit 
 il établit une connexion fiable entre chaque expéditeur et récepteur, vérifie que les paquets sont bien reçus (sinon, il les retransmet) et qu'ils arrivent dans le bon ordre (sinon, il les reclasse).
 
 chaque hôte doit avoir une **adresse IP** unique ainsi qu'un **masque de sous-réseau**.  
-dans les exercices, ils ressemblent à ça : 
+dans les exercices, ça ressemble à ça : 
 
 <img src="img/23.png" height="300px" />
 
