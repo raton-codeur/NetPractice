@@ -215,7 +215,7 @@ par exemple, pour 128, les adresses IP d'un sous-réseau sont :
 
 --- 
 
-pour le masque 1110 0000 = 224, il y a 3 bits pour différencier les adresses réseaux donc il y a 8 plages d'adresses possibles :
+pour le masque 1110 0000 = 224, il y a 3 bits pour différencier les adresses réseaux donc il y a 2<sup>3</sup> = 8 plages d'adresses possibles :
 
 <img src="img/3.jpg" height="100px" />
 
