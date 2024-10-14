@@ -434,7 +434,7 @@ autre exemple, en /26 on peut utiliser :
 
 il y a 4 sous-réseaux.
 
-la table de routage d'Internet sert à désigner l'adresse IP du routeur R1 lorsqu'Internet veut envoyer des paquets à C ou D. cela nous indique que C et D doivent avoir pour adresse de sous-réseau `138.250.20.0/26`, et donc, qu'ils se trouvent dans la plage entre `138.250.20.0` et `138.250.20.191` (cf. <a href="#m128">plages pour 192</a>). 
+la table de routage d'Internet sert à désigner l'interface du routeur R1 lorsqu'Internet veut envoyer des paquets à C ou D. cela nous indique que C et D doivent avoir pour adresse de sous-réseau `138.250.20.0/26`, et donc, qu'ils se trouvent dans la plage entre `138.250.20.0` et `138.250.20.191` (cf. <a href="#m128">plages pour 192</a>). 
 
 la table de routage de R1 sert à diriger les paquets, soit vers Internet (par défaut), soit vers C et D losqu'ils cherchent le sous-réseau `138.250.20.0/26`.
 
