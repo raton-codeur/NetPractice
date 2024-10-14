@@ -297,7 +297,7 @@ lorsqu'un sous-réseau est connecté à Internet, les adresses IP suivantes ne p
 
 ## niveau 1
 
-<img src="img/solution/1.png" width="100%" />
+<img src="img/solution/.png" width="100%" />
 
 ### premier réseau
 
