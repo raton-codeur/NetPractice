@@ -436,19 +436,19 @@ il y a 4 sous-réseaux.
 
 la table de routage d'Internet sert à désigner l'interface du routeur R1 lorsqu'Internet veut envoyer des paquets à C ou D. cela nous indique que C et D doivent avoir pour adresse de sous-réseau `138.250.20.0/26`, et donc, qu'ils se trouvent dans la plage entre `138.250.20.0` et `138.250.20.191` (cf. <a href="#m128">plages pour 192</a>). 
 
-la table de routage de R1 sert à diriger les paquets, soit vers Internet (par défaut), soit vers C et D losqu'ils cherchent le sous-réseau `138.250.20.0/26`.
+la table de routage de R1 sert à diriger les paquets, soit vers Internet (par défaut), soit vers C et D lorsqu'ils cherchent le sous-réseau `138.250.20.0/26`.
 
-la table de routage du routeur R2 sert forcément à diriger les paquets vers Internet (sinon, elle ne servirait à rien car C et D sont directement accessibles à partir d'ici). cela nous indique que le sous-réseau composé de R13 et R21 utilise une plage contenant `138.250.20.62`.
+la table de routage du routeur R2 sert forcément à diriger les paquets vers Internet (sinon, elle ne servirait à rien car C et D sont directement accessibles à partir d'ici). elle nous indique que le sous-réseau composé de R13 et R21 utilise une plage contenant `138.250.20.62`.
 
 les 3 sous-réseaux du bas utilisent donc une adresse IP identique sur les 3 premiers octets.
 
-dans le sous-réseau de D on peut utiliser, par exemple, les 16 premières valeurs de l'octet (de 0 à 15).
+dans le sous-réseau de D on peut utiliser, par exemple, les 16 premières valeurs du dernier octet (de 0 à 15).
 
 pour le reste des sous-réseaux, on est libre d'utiliser les masques qu'on veut. on peut notamment utiliser /30 car il n'y a que 2 interfaces à chaque fois.  
 
 remarque pour R13 : `138.250.20.63` est forcément une adresse de broadcast car 64 est le début d'une nouvelle plage de valeurs.
 
-l'adresse du sous-réseau de C doit être entre `138.250.20.0` et `138.250.20.191` - l'intervalle des 16 valeurs du sous-réseau de D - l'intervalle de x valeurs du sous-réseau qui contient 62.
+l'adresse du sous-réseau de C doit être entre `138.250.20.0` et `138.250.20.191` moins l'intervalle des 16 valeurs du sous-réseau de D moins l'intervalle de x valeurs du sous-réseau qui contient 62.
 
 moi, j'utilise des plages de 16 en 16 partout (cf. <a href="#m240">plages de 240</a>).
 
