@@ -387,7 +387,7 @@ en revanche, lorsqu'un paquet doit aller d'un hôte à l'autre, il a besoin de p
 en effet, en partant de A, si l'adresse de destination est l'adresse IP de B, un paquet ne peut pas savoir de lui-même qu'il doit se rendre au routeur. il faut le lui préciser dans la table de routage de A.  
 une fois au routeur, il va trouver son chemin vers B car une interface du sous-réseau de B est connectée au routeur.
 
-en destination de la table de routage, on peut donc mettre l'adresse du sous-réseau de B, c'est-à-dire par exemple : 
+en destination de la table de la routage, on peut donc indiquer l'adresse du sous-réseau de B, par exemple : 
 * `158.87.36.255/18`
 * `158.87.63.255/18` (ce qui est toujours dans la plage < 64 avec le masque 192)
 * `158.87.0.0/0` (c'est l'adresse du sous-réseau, sans masque)
@@ -406,7 +406,7 @@ dans le sous-réseau de A, le dernier octet doit être > 128 (cf. <a href="#m128
 
 la table de routage du routeur s'occupe d'envoyer les paquets de A vers Internet.
 
-pour qu'un paquet puisse passer d'Internet au sous-réseau de A, il faut donner l'adresse du sous-réseau de A à la table de routage d'Internet.
+pour qu'un paquet puisse passer d'Internet au sous-réseau de A, il faut donner l'adresse du sous-réseau de A à la table de routage d'Internet où, plus simplement, la plages de adresses du sous-réseau de A comme je le fais ici.
 
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
