@@ -404,7 +404,7 @@ dans le sous-réseau de A, le dernier octet doit être > 128 (cf. <a href="#m128
 
 la table de routage du routeur s'occupe d'envoyer les paquets de A vers Internet.
 
-pour qu'un paquet puisse passer d'Internet au sous-réseau de A, il faut donner l'adresse du sous-réseau de A à la table de routage d'Internet où, plus simplement, la plages de adresses du sous-réseau de A comme je le fais ici.
+pour qu'un paquet puisse passer d'Internet au sous-réseau de A, il faut donner la plage des adresses du sous-réseau de A à la table de routage d'Internet ou encore, l'adresse du sous-réseau de A (`57.56.53.128/0`).
 
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
