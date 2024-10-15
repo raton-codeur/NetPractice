@@ -266,8 +266,8 @@ une **table de routage** est utilisée à un endroit précis du réseau (hôte, 
 
 c'est une liste d'associations :  
 
-* adresse de sous-réseau de destination &rarr; adresse IP suivante  
-* adresse de sous-réseau de destination &rarr; adresse IP suivante  
+* sous-réseau de destination &rarr; adresse IP suivante  
+* sous-réseau de destination &rarr; adresse IP suivante  
 * ...
 
 dans les exercices, ça ressemble à ça :  
