@@ -274,8 +274,8 @@ dans les exercices, ça ressemble à ça :
 
 <img src="img/22.png" height="200px" />
 
-dans cet exemple, on voit notamment que lorsqu'un paquet veut rejoindre un hôte qui se trouve dans le sous-réseau `78.149.0.0/18` alors il est envoyé à `163.172.250.12`.  
-en effet, `78.149.0.2/18` est équivalent à `78.149.0.0/18` et fait référence aux adresses IP comprises entre `78.149.0.0` et `78.149.63.255` (cf. <a href="#m128">plages pour 192</a>).
+dans cet exemple, on voit notamment que lorsqu'un paquet veut rejoindre un hôte qui se trouve dans le sous-réseau `78.149.0.2/18` alors il est envoyé à `163.172.250.12`.  
+`78.149.0.2/18` est équivalent à `78.149.0.0/18` et fait référence aux adresses IP comprises entre `78.149.0.0` et `78.149.63.255` (cf. <a href="#m128">plages pour 192</a>). 
 
 lorsque l'adresse de destination de la table est à `default` (ou `0.0.0.0/0`) alors les paquets sont toujours (?) envoyés à l'adresse IP correspondante.
 
