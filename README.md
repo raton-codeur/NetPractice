@@ -182,7 +182,7 @@ par exemple :
 (= `01101111.11110010.11000001.00101101` avec le masque `/25`)  
 &rarr; `01101111.11110010.11000001.0` (les 25 premiers bits) + `0101101` (le reste)  
 &rarr; adresse du sous-réseau : `01101111.11110010.11000001.00000000`  
-&rarr; adresse de l'hôte au sein du sous-réseau : `00000000.00000000.00000000.0101101`
+&rarr; adresse de l'hôte au sein du sous-réseau : `00000000.00000000.00000000.00101101`
 
 on observe que choisir un plus gros masque (`11111111.11111111.11111111.11111100` par exemple), c'est augmenter le nombre de sous-réseaux possibles dans le réseau au détriment du nombre d'hôtes par sous-réseau.  
 en effet, en augmentant le masque, on augmente le nombre de bits permettant de coder le sous-réseau et on diminue le nombre de bits permettant de coder l'hôte en lui-même.
