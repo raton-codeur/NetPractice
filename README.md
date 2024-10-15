@@ -382,7 +382,7 @@ on aurait aussi pu utiliser un /29 ou un /27, mais pas un /25 car il aurait rés
 
 aucun risque de chevauchement puisque les adresses IP n'ont rien à voir l'une avec l'autre.
 
-en revanche, lorsqu'un paquet doit aller d'un hôte à l'autre, il a besoin de passer par la table de routage de hôte expéditeur.
+en revanche, lorsqu'un paquet doit aller d'un hôte à l'autre, il a besoin de passer par la table de routage de l'hôte expéditeur.
 
 en effet, en partant de A, si l'adresse de destination est l'adresse IP de B, un paquet ne peut pas savoir de lui-même qu'il doit se rendre au routeur. il faut le lui préciser dans la table de routage de A.  
 une fois au routeur, il va trouver son chemin vers B car une interface du sous-réseau de B est connectée au routeur.
