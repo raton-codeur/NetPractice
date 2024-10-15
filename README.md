@@ -292,7 +292,7 @@ on peut voir Internet comme un hôte qui n'a pas d'adresse IP en particulier.
 lorsqu'un sous-réseau est connecté à Internet, les adresses IP suivantes ne peuvent pas être utilisées. en effet, elles sont réservées aux réseaux privés (ou réseaux locaux) déconnectés d'Internet.
 * 192.168.x.x (en /16)
 * de 172.16.x.x à 172.31.x.x (en /12)
-* 10.x.x.x (/8)
+* 10.x.x.x (en /8)
 
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
