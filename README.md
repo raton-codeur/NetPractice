@@ -404,7 +404,7 @@ dans le sous-réseau de A, le dernier octet doit être > 128 (cf. <a href="#m128
 
 la table de routage du routeur s'occupe d'envoyer les paquets de A vers Internet.
 
-pour qu'un paquet puisse passer d'Internet au sous-réseau de A, il faut donner la plage des adresses du sous-réseau de A à la table de routage d'Internet ou encore, l'adresse du sous-réseau de A (`57.56.53.128/0`).
+pour qu'un paquet puisse passer d'Internet au sous-réseau de A, il faut donner la plage des adresses du sous-réseau de A à la table de routage d'Internet, ou encore, l'adresse du sous-réseau de A (`57.56.53.128/0`).
 
 [&uarr; retour au sommaire &uarr;](#sommaire)
 
@@ -447,7 +447,7 @@ les 3 sous-réseaux du bas utilisent donc une adresse IP identique sur les 3 pre
 
 dans le sous-réseau de D on peut utiliser, par exemple, les 16 premières valeurs du dernier octet (de 0 à 15).
 
-pour le reste des sous-réseaux, on est libre d'utiliser les masques qu'on veut. on peut notamment utiliser /30 car il n'y a que 2 interfaces à chaque fois.  
+pour le reste des sous-réseaux, on est libre d'utiliser les masques qu'on veut. on peut notamment utiliser /30 car il n'y a que 2 interfaces par sous-réseau.  
 
 remarque pour R13 : `138.250.20.63` est forcément une adresse de broadcast car 64 est le début d'une nouvelle plage de valeurs.
 
@@ -471,7 +471,7 @@ je vous conseille de suivre ces étapes :
 
 le plus simple est de distinguer un sous-réseau pour A et B et un autre pour C et D, mais on peut aussi tout faire dans la plage imposée par D en /8 par exemple (voir ci-dessous).
 
-j'utilise `0.0.0.0/25` comme adresse de sous-réseau de A et B. je reporte donc ce sous-réseau dans la destination des paquets d'Internet vers A.
+j'utilise `0.0.0.0/25` comme adresse de sous-réseau de A et B. je reporte donc ce sous-réseau dans la destination des paquets d'Internet (pour connecter A).
 
 le sous-réseau de D est imposé par la table de routage de D.
 
@@ -481,7 +481,7 @@ pour que les paquets d'Internet à destination de C trouvent leur chemin, je rep
 
 enfin, il faut comprendre que la table de routage de R1 sert à envoyer les paquets vers C et D (et Internet) et que la table de routage de R2 sert à les renvoyer dans l'autre sens.
 
-une autre solution un peu moins propre :
+une autre solution un peu moins précise :
 
 <img src="img/solution/9_2.png" width="100%" />
 
@@ -509,7 +509,8 @@ dans le sous-réseau du milieu (pour R13 et R21), on nous impose de rester entre
 
 dans le sous-réseau de H4, on nous impose la plage entre `138.177.41.128` et `138.177.41.191` (cf. <a href="#m128">plages pour 192</a>).
 
-à ce stade, il ne reste donc disponibles que les adresses entre `138.177.41.192` et `138.177.41.251` pour le sous-réseau de H3. il faut donc utiliser un masque qui permette de coder au plus 57 valeurs (= 251 - 192 - 2) par plage. le plus simple est d'utiliser /30 mais on peut aussi utiliser :
+à ce stade, il ne reste donc disponibles que les adresses entre `138.177.41.192` et `138.177.41.251` pour le sous-réseau de H3.  
+le plus simple est d'utiliser /30 mais on peut aussi utiliser :
 * le /29 qui va de 8 en 8
 * le /28 qui va de 16 en 16
 * le /27 qui va de 32 en 32
