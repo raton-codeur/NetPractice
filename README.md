@@ -304,9 +304,7 @@ lorsqu'un sous-réseau est connecté à Internet, les adresses IP suivantes ne p
 
 le réseau est un unique sous-réseau.
 
-le masque indique que le sous-réseau est codé sur les 3 premiers octets des adresses IP.
-
-il suffit d'utiliser une adresse identique sur les 3 premiers octets.
+le masque indique que le sous-réseau est codé sur les 3 premiers octets des adresses IP. il suffit donc d'utiliser une adresse identique sur les 3 premiers octets.
 
 ### deuxième réseau
 
